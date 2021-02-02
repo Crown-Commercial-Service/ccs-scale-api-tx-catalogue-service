@@ -27,6 +27,13 @@ server:
     accesslog:
       enabled: true
 
+# Route configuration
+api:
+  paths:
+    base: /catalogue
+    list-products: /products
+    get-product: /product
+
 # Spree servuce creds via environment only
       
 ---

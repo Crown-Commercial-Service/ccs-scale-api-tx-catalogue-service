@@ -1,20 +1,21 @@
 package uk.gov.crowncommercial.dsd.api.catalogue.routes;
 
-import static org.springframework.http.HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN;
 import org.apache.camel.Exchange;
 import org.apache.camel.LoggingLevel;
 import org.apache.camel.builder.endpoint.EndpointRouteBuilder;
+import org.apache.camel.component.http.HttpMethods;
 import org.apache.camel.model.rest.RestBindingMode;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import lombok.RequiredArgsConstructor;
-import uk.gov.crowncommercial.dsd.api.catalogue.model.ProductList;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  *
  */
 @Component
 @RequiredArgsConstructor
+@Slf4j
 public class CatalogueServiceRouteBuilder extends EndpointRouteBuilder {
 
   @Value("${api.paths.base}")
@@ -33,10 +34,17 @@ public class CatalogueServiceRouteBuilder extends EndpointRouteBuilder {
   @Override
   public void configure() throws Exception {
 
+    log.info("PATH: " + apiBasePath + apiListProducts);
+
+    getContext().setStreamCaching(true);
+
     // @formatter:off
     restConfiguration()
       .component("servlet")
-      .bindingMode(RestBindingMode.json);
+      .bindingMode(RestBindingMode.json)
+      .enableCORS(true);
+
+    // TODO: onException()....
 
     /*
      * GET Products
@@ -46,7 +54,8 @@ public class CatalogueServiceRouteBuilder extends EndpointRouteBuilder {
      */
     rest(apiBasePath)
       .get(apiListProducts)
-      .outType(ProductList.class)
+      .skipBindingOnErrorCode(false)
+//      .outType(ProductList.class)
       .to(ROUTE_GET_PRODUCTS);
 
     from(ROUTE_GET_PRODUCTS)
@@ -54,17 +63,24 @@ public class CatalogueServiceRouteBuilder extends EndpointRouteBuilder {
       .log(LoggingLevel.INFO, "Endpoint get-products invoked")
 
       // Don't bridge - can set a predictable endpoint URI to identify the component in tests.
-      .setHeader(Exchange.HTTP_URI, constant("https://actual-spree-api-endpoint-injected/"))
+      .setHeader(Exchange.HTTP_METHOD, constant(HttpMethods.GET))
+      .setHeader(Exchange.HTTP_URI, simple("{{spree.api.url}}{{spree.api.paths.base}}{{spree.api.paths.list-products}}"))
+      .setHeader(Exchange.HTTP_QUERY, constant("filter[name]=\"Compaq Rack 4136\""))
+
+      // Pass through Bearer auth if given
+      .setHeader("Authorization", simple("${header.Authorization}"))
+
+      //.to("log:DEBUG?showBody=true&showHeaders=true")
       .to("http://spree-api")
+      .unmarshal().json()
       .log(LoggingLevel.INFO, "${body}")
       // TODO: Transform response
 
-      .setBody(e -> new ProductList())
       .to(ROUTE_FINALISE_RESPONSE);
 
     from(ROUTE_FINALISE_RESPONSE)
       .removeHeaders("*")
-      .setHeader(ACCESS_CONTROL_ALLOW_ORIGIN, constant("*"));
+      .log(LoggingLevel.INFO, "${body}");
     // @formatter:on
   }
 

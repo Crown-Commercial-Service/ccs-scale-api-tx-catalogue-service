@@ -11,11 +11,12 @@ camel:
   dataformat:
     json-jackson:
       object-mapper: jacksonObjectMapper
+      disable-features: FAIL_ON_EMPTY_BEANS
           
 logging:
   level:
     uk.gov.crowncommercial.dsd.api.catalogue: DEBUG
-    org.apache.camel: INFO
+    org.apache.camel: DEBUG
     org.springframework: INFO
     org.apache.tomcat: INFO
     org.apache.catalina: INFO
@@ -32,9 +33,16 @@ api:
   paths:
     base: /catalogue
     list-products: /products
-    get-product: /product
-
-# Spree servuce creds via environment only
+    get-product: /products/{id}
+    
+# Spree
+spree:
+  api:
+    url: https://dev.scale-bat-backend.alb.crowncommercial.gov.uk
+    paths:
+      base: /api/v2/storefront
+      list-products: /products
+      get-product: /products/{id}
       
 ---
 spring:

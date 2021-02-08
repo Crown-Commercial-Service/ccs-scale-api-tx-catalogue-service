@@ -8,6 +8,7 @@ import lombok.Value;
  */
 @Value
 public class ProductProperty {
+
   @JsonProperty("name")
   private String name;
 
@@ -20,4 +21,3 @@ public class ProductProperty {
   @JsonProperty("group")
   private String group;
 }
-

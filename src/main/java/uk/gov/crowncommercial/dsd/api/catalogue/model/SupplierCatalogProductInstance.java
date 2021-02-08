@@ -9,6 +9,7 @@ import lombok.Value;
  */
 @Value
 public class SupplierCatalogProductInstance {
+
   @JsonProperty("supplier_product_catalog_instance_id")
   private String supplierProductCatalogInstanceId;
 
@@ -21,7 +22,7 @@ public class SupplierCatalogProductInstance {
   @JsonProperty("currency")
   private String currency;
 
-  @JsonProperty("display_price")
+  @JsonProperty("displayPrice")
   private String displayPrice;
 
   @JsonProperty("weight")
@@ -36,26 +37,24 @@ public class SupplierCatalogProductInstance {
   @JsonProperty("depth")
   private String depth;
 
-  @JsonProperty("is_master")
+  @JsonProperty("isMaster")
   private Boolean isMaster;
 
   @JsonProperty("purchasable")
   private Boolean purchasable;
 
-  @JsonProperty("in_stock")
+  @JsonProperty("inStock")
   private Boolean inStock;
 
   @JsonProperty("backorderable")
   private Boolean backorderable;
 
-  @JsonProperty("commercial_agreement_lot")
+  @JsonProperty("commercialAgreementLot")
   private CommercialAgreementLot commercialAgreementLot;
 
-  @JsonProperty("product_delivery_charges")
+  @JsonProperty("productDeliveryCharges")
   private ProductDeliveryCharges productDeliveryCharges;
 
   @JsonProperty("supplier")
   private Supplier supplier;
-
 }
-

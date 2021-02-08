@@ -3,20 +3,21 @@ package uk.gov.crowncommercial.dsd.api.catalogue.model;
 import java.math.BigDecimal;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Value;
 
 /**
  * Product
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen",
-    date = "2021-02-01T13:35:17.494247Z[Europe/London]")
+@Value
 public class Product {
+
   @JsonProperty("name")
   private String name;
 
   @JsonProperty("description")
   private String description;
 
-  @JsonProperty("delivery_included_price")
+  @JsonProperty("deliveryIncludedPrice")
   private String deliveryIncludedPrice;
 
   @JsonProperty("price")
@@ -25,16 +26,16 @@ public class Product {
   @JsonProperty("currency")
   private String currency;
 
-  @JsonProperty("display_delivery_included_price")
+  @JsonProperty("displayDeliveryIncludedPrice")
   private String displayDeliveryIncludedPrice;
 
-  @JsonProperty("display_price")
+  @JsonProperty("displayPrice")
   private String displayPrice;
 
-  @JsonProperty("key_selling_points")
+  @JsonProperty("keySellingPoints")
   private String keySellingPoints;
 
-  @JsonProperty("available_on")
+  @JsonProperty("availableOn")
   private java.sql.Timestamp availableOn;
 
   @JsonProperty("active")
@@ -46,64 +47,59 @@ public class Product {
   @JsonProperty("manufacturer")
   private String manufacturer;
 
-  @JsonProperty("mpn_number")
+  @JsonProperty("mpnNumber")
   private String mpnNumber;
 
   @JsonProperty("purchasable")
   private Boolean purchasable;
 
-  @JsonProperty("in_stock")
+  @JsonProperty("inStock")
   private Boolean inStock;
 
   @JsonProperty("backorderable")
   private Boolean backorderable;
 
-  @JsonProperty("cnet_id")
+  @JsonProperty("cnetId")
   private String cnetId;
 
-  @JsonProperty("default_supplier_product_catalog_instance_id")
+  @JsonProperty("defaultSupplierProductCatalogInstanceId")
   private String defaultSupplierProductCatalogInstanceId;
 
-  @JsonProperty("image_id")
+  @JsonProperty("imageId")
   private String imageId;
 
   @JsonProperty("slug")
   private String slug;
 
-  @JsonProperty("total_on_hand")
+  @JsonProperty("totalOnHand")
   private BigDecimal totalOnHand;
 
   @JsonProperty("unspsc")
   private String unspsc;
 
-  @JsonProperty("meta_description")
+  @JsonProperty("metaDescription")
   private String metaDescription;
 
-  @JsonProperty("meta_keywords")
+  @JsonProperty("metaKeywords")
   private String metaKeywords;
 
-  @JsonProperty("created_at")
+  @JsonProperty("createdAt")
   private java.sql.Timestamp createdAt;
 
-  @JsonProperty("updated_at")
+  @JsonProperty("updatedAt")
   private java.sql.Timestamp updatedAt;
 
   @JsonProperty("images")
 
-  private final List<Image> images = null;
+  private List<Image> images = null;
 
-  @JsonProperty("supplier_catalog_product_instances")
-  private List<SupplierCatalogProductInstance> supplierCatalogProductInstances;
+  @JsonProperty("supplierCatalogProductInstances")
+  private List<SupplierCatalogProductInstance> supplierCatalogProductInstances = null;
 
   @JsonProperty("documents")
-  private List<Document> documents;
+  private List<Document> documents = null;
 
-  @JsonProperty("product_properties")
-  private List<ProductProperty> productProperties;
+  @JsonProperty("productProperties")
+  private List<ProductProperty> productProperties = null;
 
-  public Product name(final String name) {
-    this.name = name;
-    return this;
-  }
 }
-

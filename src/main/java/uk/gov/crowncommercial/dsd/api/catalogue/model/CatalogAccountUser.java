@@ -8,15 +8,13 @@ import lombok.Value;
  */
 @Value
 public class CatalogAccountUser {
-
   @JsonProperty("email")
   private String email;
 
   @JsonProperty("password")
   private String password;
 
-  @JsonProperty("password_confirmation")
+  @JsonProperty("passwordConfirmation")
   private String passwordConfirmation;
-
 }
 

@@ -8,7 +8,6 @@ import lombok.Value;
  */
 @Value
 public class ImageStyle {
-
   @JsonProperty("url")
   private String url;
 
@@ -17,6 +16,5 @@ public class ImageStyle {
 
   @JsonProperty("height")
   private Integer height;
-
 }
 

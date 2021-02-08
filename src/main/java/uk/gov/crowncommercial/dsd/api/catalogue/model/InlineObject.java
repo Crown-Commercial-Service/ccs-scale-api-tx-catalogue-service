@@ -8,9 +8,7 @@ import lombok.Value;
  */
 @Value
 public class InlineObject {
-
   @JsonProperty("user")
   private CatalogAccountUser user;
-
 }
 

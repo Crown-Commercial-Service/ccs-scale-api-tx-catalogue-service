@@ -8,14 +8,13 @@ import lombok.Value;
  */
 @Value
 public class Supplier {
+
   @JsonProperty("id")
   private String id;
 
   @JsonProperty("name")
   private String name;
 
-  @JsonProperty("about_us")
+  @JsonProperty("aboutUs")
   private String aboutUs;
-
 }
-

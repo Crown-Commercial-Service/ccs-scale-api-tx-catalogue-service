@@ -17,6 +17,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.boot.web.server.LocalServerPort;
+import org.springframework.test.context.ActiveProfiles;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import uk.gov.crowncommercial.dsd.api.catalogue.routes.CatalogueServiceRouteBuilder;
@@ -24,6 +25,7 @@ import uk.gov.crowncommercial.dsd.api.catalogue.routes.CatalogueServiceRouteBuil
 @RunWith(CamelSpringBootRunner.class)
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 @MockEndpointsAndSkip("http://spree-api")
+@ActiveProfiles("test")
 public class APITest {
 
   @Value("${api.paths.base}")
@@ -54,7 +56,7 @@ public class APITest {
     AdviceWith.adviceWith(camelContext, CatalogueServiceRouteBuilder.ROUTE_ID_GET_PRODUCTS,
         builder -> {
           builder.weaveByToUri("http://spree-api").replace().setBody()
-              .constant("{\"spree-products\": []}");
+              .constant("{\"products\": [], \"meta\": {}, \"listLinks\": {} }");
         });
 
     /*

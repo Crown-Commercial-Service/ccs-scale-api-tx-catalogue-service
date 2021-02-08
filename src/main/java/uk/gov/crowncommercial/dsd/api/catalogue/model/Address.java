@@ -8,7 +8,6 @@ import lombok.Value;
  */
 @Value
 public class Address {
-
   @JsonProperty("id")
   private String id;
 
@@ -36,20 +35,19 @@ public class Address {
   @JsonProperty("county")
   private String county;
 
-  @JsonProperty("country_name")
+  @JsonProperty("countryName")
   private String countryName;
 
-  @JsonProperty("country_iso3")
+  @JsonProperty("countryIso3")
   private String countryIso3;
 
   @JsonProperty("company")
   private String company;
 
-  @JsonProperty("default_billing_address")
+  @JsonProperty("defaultBillingAddress")
   private Boolean defaultBillingAddress;
 
-  @JsonProperty("default_shipping_address")
+  @JsonProperty("defaultShippingAddress")
   private Boolean defaultShippingAddress;
-
 }
 

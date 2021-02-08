@@ -9,12 +9,10 @@ import lombok.Value;
  */
 @Value
 public class Image {
-
   @JsonProperty("id")
   private String id;
 
   @JsonProperty("styles")
   private List<ImageStyle> styles = null;
-
 }
 

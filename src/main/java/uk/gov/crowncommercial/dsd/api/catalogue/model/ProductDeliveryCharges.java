@@ -9,35 +9,34 @@ import lombok.Value;
  */
 @Value
 public class ProductDeliveryCharges {
+
   @JsonProperty("id")
   private String id;
 
-  @JsonProperty("standard_charge_product_uk_mainland")
+  @JsonProperty("standardChargeProductUkMainland")
   private String standardChargeProductUkMainland;
 
-  @JsonProperty("standard_charge_basket&quot;")
+  @JsonProperty("standardChargeBasket&quot;")
   private String standardChargeBasketDoubleQuote;
 
-  @JsonProperty("standard_charge_product_uk_non_mainland&quot;")
+  @JsonProperty("standardChargeProductUkNonMainland&quot;")
   private String standardChargeProductUkNonMainlandDoubleQuote;
 
-  @JsonProperty("standard_delivery_time&quot;")
+  @JsonProperty("standardDeliveryTime&quot;")
   private BigDecimal standardDeliveryTimeDoubleQuote;
 
-  @JsonProperty("next_day_charge_product_uk_mainland&quot;")
+  @JsonProperty("nextDayChargeProductUkMainland&quot;")
   private String nextDayChargeProductUkMainlandDoubleQuote;
 
-  @JsonProperty("next_day_charge_basket&quot;")
+  @JsonProperty("nextDayChargeBasket&quot;")
   private String nextDayChargeBasketDoubleQuote;
 
-  @JsonProperty("display_standard_charge_product_uk_mainland&quot;")
+  @JsonProperty("displayStandardChargeProductUkMainland&quot;")
   private String displayStandardChargeProductUkMainlandDoubleQuote;
 
-  @JsonProperty("display_standard_charge_product_uk_non_mainland&quot;")
+  @JsonProperty("displayStandardChargeProductUkNonMainland&quot;")
   private String displayStandardChargeProductUkNonMainlandDoubleQuote;
 
-  @JsonProperty("display_next_day_charge_product_uk_mainland&quot;")
+  @JsonProperty("displayNextDayChargeProductUkMainland&quot;")
   private String displayNextDayChargeProductUkMainlandDoubleQuote;
-
 }
-

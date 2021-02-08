@@ -8,15 +8,13 @@ import lombok.Value;
  */
 @Value
 public class Document {
-
   @JsonProperty("group")
   private String group;
 
   @JsonProperty("url")
   private String url;
 
-  @JsonProperty("content_type")
+  @JsonProperty("contentType")
   private String contentType;
-
 }
 

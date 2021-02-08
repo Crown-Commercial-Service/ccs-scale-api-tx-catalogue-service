@@ -10,13 +10,14 @@ import lombok.Value;
  */
 @Value
 public class ProductListMeta {
+
   @JsonProperty("count")
   private BigDecimal count;
 
-  @JsonProperty("total_count")
+  @JsonProperty("totalCount")
   private BigDecimal totalCount;
 
-  @JsonProperty("total_pages")
+  @JsonProperty("totalPages")
   private BigDecimal totalPages;
 
   @JsonProperty("filters")
@@ -25,4 +26,3 @@ public class ProductListMeta {
   @JsonProperty("breadcrumbs")
   private List<Object> breadcrumbs = null;
 }
-

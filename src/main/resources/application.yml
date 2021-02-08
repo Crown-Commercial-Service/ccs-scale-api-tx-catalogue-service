@@ -16,7 +16,7 @@ camel:
 logging:
   level:
     uk.gov.crowncommercial.dsd.api.catalogue: DEBUG
-    org.apache.camel: DEBUG
+    org.apache.camel: INFO
     org.springframework: INFO
     org.apache.tomcat: INFO
     org.apache.catalina: INFO
@@ -25,6 +25,7 @@ logging:
 server:
   port: 9030
   tomcat:
+    relaxed-query-chars: "[,]"
     accesslog:
       enabled: true
 
@@ -35,10 +36,9 @@ api:
     list-products: /products
     get-product: /products/{id}
     
-# Spree
+# Spree (Specify `SPREE_API_HOST` via environment)
 spree:
   api:
-    url: https://dev.scale-bat-backend.alb.crowncommercial.gov.uk
     paths:
       base: /api/v2/storefront
       list-products: /products

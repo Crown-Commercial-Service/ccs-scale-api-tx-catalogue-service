@@ -2,7 +2,6 @@ package uk.gov.crowncommercial.dsd.api.catalogue.model;
 
 import java.time.LocalDate;
 import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.format.annotation.DateTimeFormat.ISO;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Value;
 
@@ -11,25 +10,23 @@ import lombok.Value;
  */
 @Value
 public class CommercialAgreementLot {
-
   @JsonProperty("id")
   private String id;
 
-  @JsonProperty("full_name")
+  @JsonProperty("fullName")
   private String fullName;
 
-  @JsonProperty("ca_name")
+  @JsonProperty("caName")
   private String caName;
 
-  @JsonProperty("ca_ref")
-  private String caRef;
+  @JsonProperty("caNumber")
+  private String caNumber;
 
-  @JsonProperty("lot_number")
+  @JsonProperty("lotNumber")
   private String lotNumber;
 
-  @JsonProperty("lot_expiry_date")
-  @DateTimeFormat(iso = ISO.DATE)
+  @JsonProperty("lotExpiryDate")
+  @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
   private LocalDate lotExpiryDate;
-
 }
 

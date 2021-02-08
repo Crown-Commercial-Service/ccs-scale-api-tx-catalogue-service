@@ -9,12 +9,10 @@ import lombok.Value;
  */
 @Value
 public class Account {
-
   @JsonProperty("email")
   private String email;
 
   @JsonProperty("addresses")
   private List<Address> addresses = null;
-
 }
 

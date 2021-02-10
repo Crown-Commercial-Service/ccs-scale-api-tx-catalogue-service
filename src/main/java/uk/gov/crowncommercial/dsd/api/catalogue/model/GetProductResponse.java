@@ -4,10 +4,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Value;
 
 /**
- * InlineResponse2001
+ * GetProductResponse
  */
 @Value
-public class InlineResponse2001 {
+public class GetProductResponse {
   @JsonProperty("product")
   private Product product;
 

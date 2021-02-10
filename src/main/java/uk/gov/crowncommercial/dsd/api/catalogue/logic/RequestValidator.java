@@ -15,7 +15,6 @@ public class RequestValidator implements Processor {
     /*
      * TODO: Validate request... throw RequestValidationException or continue... etc
      */
-
   }
 
 }

@@ -53,7 +53,7 @@ public class APITest {
   public void listProducts() throws Exception {
 
     // Mock the behaviour of the Spree v2 API
-    AdviceWith.adviceWith(camelContext, CatalogueServiceRouteBuilder.ROUTE_ID_GET_PRODUCTS,
+    AdviceWith.adviceWith(camelContext, CatalogueServiceRouteBuilder.ROUTE_ID_LIST_PRODUCTS,
         builder -> {
           builder.weaveByToUri("http://spree-api").replace().setBody()
               .constant("{\"products\": [], \"meta\": {}, \"listLinks\": {} }");

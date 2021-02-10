@@ -10,12 +10,17 @@ import org.apache.camel.component.http.HttpMethods;
 import org.apache.camel.model.rest.RestBindingMode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import uk.gov.crowncommercial.dsd.api.catalogue.converter.ListProductsResponseConverter;
 import uk.gov.crowncommercial.dsd.api.catalogue.logic.RequestValidator;
+import uk.gov.crowncommercial.dsd.api.catalogue.logic.SpreeProductListRequestComposer;
 import uk.gov.crowncommercial.dsd.api.catalogue.model.ApiError;
 import uk.gov.crowncommercial.dsd.api.catalogue.model.Errors;
+import uk.gov.crowncommercial.dsd.api.catalogue.model.ListProductsResponse;
 
 /**
  *
@@ -37,8 +42,13 @@ public class CatalogueServiceRouteBuilder extends EndpointRouteBuilder {
   @Autowired
   private RequestValidator requestValidator;
 
-  public static final String ROUTE_ID_GET_PRODUCTS = "get-products";
-  private static final String ROUTE_GET_PRODUCTS = "direct:" + ROUTE_ID_GET_PRODUCTS;
+  @Autowired
+  private SpreeProductListRequestComposer spreeProductListRequestComposer;
+
+  private ListProductsResponseConverter listProductsResponseConverter;
+
+  public static final String ROUTE_ID_LIST_PRODUCTS = "list-products";
+  private static final String ROUTE_LIST_PRODUCTS = "direct:" + ROUTE_ID_LIST_PRODUCTS;
   private static final String ROUTE_FINALISE_RESPONSE = "direct:finalise-response";
 
   @Override
@@ -58,12 +68,15 @@ public class CatalogueServiceRouteBuilder extends EndpointRouteBuilder {
     onException(ValidationException.class)
       .handled(true)
       .setBody(constant(Errors.builder().error(new ApiError(BAD_REQUEST.name(), BAD_REQUEST.getReasonPhrase(), "something invalid")).build()))
-      .setHeader(Exchange.HTTP_RESPONSE_CODE, constant(BAD_REQUEST.value()));
+      .setHeader(Exchange.HTTP_RESPONSE_CODE, constant(BAD_REQUEST.value()))
+      .to(ROUTE_FINALISE_RESPONSE);
 
     onException(Exception.class)
       .handled(true)
+      .logHandled(true)
       .setBody(constant(Errors.builder().error(new ApiError(INTERNAL_SERVER_ERROR.name(), INTERNAL_SERVER_ERROR.getReasonPhrase(), "Unexpected error")).build()))
-      .setHeader(Exchange.HTTP_RESPONSE_CODE, constant(INTERNAL_SERVER_ERROR.value()));
+      .setHeader(Exchange.HTTP_RESPONSE_CODE, constant(INTERNAL_SERVER_ERROR.value()))
+      .to(ROUTE_FINALISE_RESPONSE);
 
     /*
      * GET Products
@@ -74,33 +87,34 @@ public class CatalogueServiceRouteBuilder extends EndpointRouteBuilder {
     rest(apiBasePath)
       .get(apiListProducts)
       .skipBindingOnErrorCode(false)
-//      .outType(ProductList.class)
-      .to(ROUTE_GET_PRODUCTS);
+      .outType(ListProductsResponse.class)
+      .to(ROUTE_LIST_PRODUCTS);
 
-    from(ROUTE_GET_PRODUCTS)
-      .routeId(ROUTE_ID_GET_PRODUCTS)
+    from(ROUTE_LIST_PRODUCTS)
+      .routeId(ROUTE_ID_LIST_PRODUCTS)
       .log(LoggingLevel.INFO, "Endpoint get-products invoked")
 
       // Validate request
       .process(requestValidator)
-      // TODO: Prepare Spree request - anything much here?
+      .process(spreeProductListRequestComposer)
 
       // Don't bridge - can set a predictable endpoint URI to identify the component in tests.
       .setHeader(Exchange.HTTP_METHOD, constant(HttpMethods.GET))
       .setHeader(Exchange.HTTP_URI, simple("{{SPREE_API_HOST}}{{spree.api.paths.base}}{{spree.api.paths.list-products}}"))
+      .setHeader(HttpHeaders.ACCEPT, constant(MediaType.APPLICATION_JSON_VALUE))
 
       // TODO: Extend
-      .setHeader(Exchange.HTTP_QUERY, simple("filter[name]=${header.filter[name]}"))
       .to("log:DEBUG?showBody=false&showHeaders=true")
 
-      // TODO: Replace with a header filter to strip `filter[*]` and other in params that end up as request headers otherwise (excl. Authorization)
-      .removeHeaders("filter[name]")
-      .to("http://spree-api")
+      .to("http://spree-api?headerFilterStrategy=#spreeApiHeaderFilter")
 
       .unmarshal().json()
-      .to("log:DEBUG?showBody=true&showHeaders=true")
+      .log("${body.class}")
+      .to("log:DEBUG?showBody=false&showHeaders=true")
 
       // TODO: Transform response
+      .convertBodyTo(ListProductsResponse.class)
+      .to("log:DEBUG?showBody=true&showHeaders=true")
       .to(ROUTE_FINALISE_RESPONSE);
 
     from(ROUTE_FINALISE_RESPONSE)

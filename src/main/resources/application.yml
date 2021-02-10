@@ -12,6 +12,7 @@ camel:
     json-jackson:
       object-mapper: jacksonObjectMapper
       disable-features: FAIL_ON_EMPTY_BEANS
+      
           
 logging:
   level:
@@ -20,7 +21,7 @@ logging:
     org.springframework: INFO
     org.apache.tomcat: INFO
     org.apache.catalina: INFO
-    org.neo4j.ogm: INFO
+    # org.apache.http: DEBUG
     
 server:
   port: 9030

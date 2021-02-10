@@ -6,21 +6,21 @@ import org.apache.camel.TypeConverters;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import uk.gov.crowncommercial.dsd.api.catalogue.model.ProductListMeta;
+import uk.gov.crowncommercial.dsd.api.catalogue.model.ListLinks;
 
 /**
  *
  */
 @Component
-public class ProductListMetaConverter implements TypeConverters {
+public class ListLinksConverter implements TypeConverters {
 
   @Autowired
   private ObjectMapper objectMapper;
 
   @Converter
-  public ProductListMeta toProductListMeta(final Map<String, Object> data) {
+  public ListLinks toListLinks(final Map<String, Object> data) {
 
-    return objectMapper.convertValue(data, ProductListMeta.class);
+    return objectMapper.convertValue(data, ListLinks.class);
   }
 
 }

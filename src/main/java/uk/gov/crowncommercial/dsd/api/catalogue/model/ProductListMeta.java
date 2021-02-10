@@ -1,28 +1,30 @@
 package uk.gov.crowncommercial.dsd.api.catalogue.model;
 
-import java.math.BigDecimal;
 import java.util.List;
+import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Value;
+import lombok.Data;
 
 /**
  * ProductListMeta
  */
-@Value
+@Data
 public class ProductListMeta {
 
   @JsonProperty("count")
-  private BigDecimal count;
+  private Long count;
 
   @JsonProperty("totalCount")
-  private BigDecimal totalCount;
+  @JsonAlias("total_count")
+  private Long totalCount;
 
   @JsonProperty("totalPages")
-  private BigDecimal totalPages;
+  @JsonAlias("total_pages")
+  private Long totalPages;
 
   @JsonProperty("filters")
-  private Object filters;
+  private Filters filters;
 
   @JsonProperty("breadcrumbs")
-  private List<Object> breadcrumbs = null;
+  private List<BreadcrumbMeta> breadcrumbs;
 }

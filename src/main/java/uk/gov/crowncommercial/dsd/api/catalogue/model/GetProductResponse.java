@@ -1,17 +1,17 @@
 package uk.gov.crowncommercial.dsd.api.catalogue.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Value;
+import lombok.Builder;
 
 /**
  * GetProductResponse
  */
-@Value
+@Builder
 public class GetProductResponse {
+
   @JsonProperty("product")
-  private Product product;
+  private final Product product;
 
   @JsonProperty("meta")
-  private Object meta;
+  private final Object meta;
 }
-

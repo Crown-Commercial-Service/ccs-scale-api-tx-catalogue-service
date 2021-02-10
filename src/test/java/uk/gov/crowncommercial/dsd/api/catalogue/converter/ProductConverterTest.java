@@ -53,6 +53,8 @@ class ProductConverterTest {
     assertEquals("Compaq", product.getManufacturer());
     assertEquals("244502-056", product.getMpnNumber());
     assertEquals(true, product.getPurchasable());
+
+    // TODO: More attrs
   }
 
 }

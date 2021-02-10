@@ -14,8 +14,6 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
-import uk.gov.crowncommercial.dsd.api.catalogue.converter.ListProductsResponseConverter;
 import uk.gov.crowncommercial.dsd.api.catalogue.logic.RequestValidator;
 import uk.gov.crowncommercial.dsd.api.catalogue.logic.SpreeProductListRequestComposer;
 import uk.gov.crowncommercial.dsd.api.catalogue.model.ApiError;
@@ -27,7 +25,6 @@ import uk.gov.crowncommercial.dsd.api.catalogue.model.ListProductsResponse;
  */
 @Component
 @RequiredArgsConstructor
-@Slf4j
 public class CatalogueServiceRouteBuilder extends EndpointRouteBuilder {
 
   @Value("${api.paths.base}")
@@ -44,8 +41,6 @@ public class CatalogueServiceRouteBuilder extends EndpointRouteBuilder {
 
   @Autowired
   private SpreeProductListRequestComposer spreeProductListRequestComposer;
-
-  private ListProductsResponseConverter listProductsResponseConverter;
 
   public static final String ROUTE_ID_LIST_PRODUCTS = "list-products";
   private static final String ROUTE_LIST_PRODUCTS = "direct:" + ROUTE_ID_LIST_PRODUCTS;
@@ -103,18 +98,13 @@ public class CatalogueServiceRouteBuilder extends EndpointRouteBuilder {
       .setHeader(Exchange.HTTP_URI, simple("{{SPREE_API_HOST}}{{spree.api.paths.base}}{{spree.api.paths.list-products}}"))
       .setHeader(HttpHeaders.ACCEPT, constant(MediaType.APPLICATION_JSON_VALUE))
 
-      // TODO: Extend
+      // Log headers prior to Spree API invocation
       .to("log:DEBUG?showBody=false&showHeaders=true")
-
       .to("http://spree-api?headerFilterStrategy=#spreeApiHeaderFilter")
 
       .unmarshal().json()
-      .log("${body.class}")
       .to("log:DEBUG?showBody=false&showHeaders=true")
-
-      // TODO: Transform response
       .convertBodyTo(ListProductsResponse.class)
-      .to("log:DEBUG?showBody=true&showHeaders=true")
       .to(ROUTE_FINALISE_RESPONSE);
 
     from(ROUTE_FINALISE_RESPONSE)

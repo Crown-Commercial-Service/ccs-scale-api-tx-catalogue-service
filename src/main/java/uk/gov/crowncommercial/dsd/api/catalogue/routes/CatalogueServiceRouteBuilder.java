@@ -2,6 +2,9 @@ package uk.gov.crowncommercial.dsd.api.catalogue.routes;
 
 import static org.springframework.http.HttpStatus.BAD_REQUEST;
 import static org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR;
+import static uk.gov.crowncommercial.dsd.api.catalogue.config.Constants.ROUTE_FINALISE_RESPONSE;
+import static uk.gov.crowncommercial.dsd.api.catalogue.config.Constants.ROUTE_ID_LIST_PRODUCTS;
+import static uk.gov.crowncommercial.dsd.api.catalogue.config.Constants.ROUTE_LIST_PRODUCTS;
 import org.apache.camel.Exchange;
 import org.apache.camel.LoggingLevel;
 import org.apache.camel.ValidationException;
@@ -14,6 +17,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import lombok.RequiredArgsConstructor;
+import uk.gov.crowncommercial.dsd.api.catalogue.config.Constants;
 import uk.gov.crowncommercial.dsd.api.catalogue.logic.RequestValidator;
 import uk.gov.crowncommercial.dsd.api.catalogue.logic.SpreeProductListRequestComposer;
 import uk.gov.crowncommercial.dsd.api.catalogue.model.ApiError;
@@ -41,10 +45,6 @@ public class CatalogueServiceRouteBuilder extends EndpointRouteBuilder {
 
   @Autowired
   private SpreeProductListRequestComposer spreeProductListRequestComposer;
-
-  public static final String ROUTE_ID_LIST_PRODUCTS = "list-products";
-  private static final String ROUTE_LIST_PRODUCTS = "direct:" + ROUTE_ID_LIST_PRODUCTS;
-  private static final String ROUTE_FINALISE_RESPONSE = "direct:finalise-response";
 
   @Override
   public void configure() throws Exception {
@@ -83,6 +83,7 @@ public class CatalogueServiceRouteBuilder extends EndpointRouteBuilder {
       .get(apiListProducts)
       .skipBindingOnErrorCode(false)
       .outType(ListProductsResponse.class)
+      .produces(Constants.MEDIATYPE_APP_VND_JSON)
       .to(ROUTE_LIST_PRODUCTS);
 
     from(ROUTE_LIST_PRODUCTS)

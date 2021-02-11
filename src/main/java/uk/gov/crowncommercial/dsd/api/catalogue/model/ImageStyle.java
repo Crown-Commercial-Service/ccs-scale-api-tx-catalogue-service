@@ -1,13 +1,14 @@
 package uk.gov.crowncommercial.dsd.api.catalogue.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Value;
+import lombok.Data;
 
 /**
  * ImageStyle
  */
-@Value
+@Data
 public class ImageStyle {
+
   @JsonProperty("url")
   private String url;
 
@@ -17,4 +18,3 @@ public class ImageStyle {
   @JsonProperty("height")
   private Integer height;
 }
-

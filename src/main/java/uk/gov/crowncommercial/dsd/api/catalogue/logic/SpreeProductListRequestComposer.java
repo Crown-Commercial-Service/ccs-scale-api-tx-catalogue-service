@@ -8,7 +8,8 @@ import org.apache.camel.Processor;
 import org.springframework.stereotype.Component;
 
 /**
- *
+ * Prepare the List Products request to Spree, mostly just translating accepted incoming query
+ * parameters.
  */
 @Component
 public class SpreeProductListRequestComposer implements Processor {
@@ -30,6 +31,9 @@ public class SpreeProductListRequestComposer implements Processor {
 
     otherParams.stream().filter(headers::containsKey)
         .forEach(p -> queryParams.add(p + '=' + headers.get(p)));
+
+    // Ensure we retrieve image links
+    queryParams.add("include=image");
 
     exchange.getIn().setHeader(Exchange.HTTP_QUERY, queryParams.toString());
   }

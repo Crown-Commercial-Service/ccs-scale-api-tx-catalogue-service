@@ -110,15 +110,15 @@ public class Product {
   private OffsetDateTime updatedAt;
 
   @JsonProperty("images")
-  private List<Image> images = null;
+  private List<Image> images;
 
   @JsonProperty("supplierCatalogProductInstances")
-  private List<SupplierCatalogProductInstance> supplierCatalogProductInstances = null;
+  private List<SupplierCatalogProductInstance> supplierCatalogProductInstances;
 
   @JsonProperty("documents")
-  private List<Document> documents = null;
+  private List<Document> documents;
 
   @JsonProperty("productProperties")
-  private List<ProductProperty> productProperties = null;
+  private List<ProductProperty> productProperties;
 
 }

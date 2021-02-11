@@ -18,9 +18,9 @@ public class ListLinksConverter implements TypeConverters {
   private ObjectMapper objectMapper;
 
   @Converter
-  public ListLinks toListLinks(final Map<String, Object> data) {
+  public ListLinks toListLinks(final Map<String, Object> listLinksData) {
 
-    return objectMapper.convertValue(data, ListLinks.class);
+    return objectMapper.convertValue(listLinksData, ListLinks.class);
   }
 
 }

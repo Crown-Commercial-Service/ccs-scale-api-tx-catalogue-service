@@ -20,7 +20,7 @@ import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.test.context.ActiveProfiles;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
-import uk.gov.crowncommercial.dsd.api.catalogue.routes.CatalogueServiceRouteBuilder;
+import uk.gov.crowncommercial.dsd.api.catalogue.config.Constants;
 
 @RunWith(CamelSpringBootRunner.class)
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
@@ -53,11 +53,10 @@ public class APITest {
   public void listProducts() throws Exception {
 
     // Mock the behaviour of the Spree v2 API
-    AdviceWith.adviceWith(camelContext, CatalogueServiceRouteBuilder.ROUTE_ID_LIST_PRODUCTS,
-        builder -> {
-          builder.weaveByToUri("http://spree-api").replace().setBody()
-              .constant("{\"products\": [], \"meta\": {}, \"listLinks\": {} }");
-        });
+    AdviceWith.adviceWith(camelContext, Constants.ROUTE_ID_LIST_PRODUCTS, builder -> {
+      builder.weaveByToUri("http://spree-api").replace().setBody()
+          .constant("{\"products\": [], \"meta\": {}, \"listLinks\": {} }");
+    });
 
     /*
      * RESTAssured Example

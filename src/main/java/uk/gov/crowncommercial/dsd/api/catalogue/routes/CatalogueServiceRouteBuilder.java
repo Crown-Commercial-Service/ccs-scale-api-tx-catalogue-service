@@ -1,27 +1,28 @@
 package uk.gov.crowncommercial.dsd.api.catalogue.routes;
 
+import static java.lang.Boolean.TRUE;
 import static org.springframework.http.HttpStatus.BAD_REQUEST;
 import static org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR;
-import static uk.gov.crowncommercial.dsd.api.catalogue.config.Constants.ROUTE_FINALISE_RESPONSE;
-import static uk.gov.crowncommercial.dsd.api.catalogue.config.Constants.ROUTE_ID_LIST_PRODUCTS;
-import static uk.gov.crowncommercial.dsd.api.catalogue.config.Constants.ROUTE_LIST_PRODUCTS;
+import static uk.gov.crowncommercial.dsd.api.catalogue.config.Constants.*;
+import java.util.Map;
 import org.apache.camel.Exchange;
 import org.apache.camel.LoggingLevel;
 import org.apache.camel.ValidationException;
 import org.apache.camel.builder.endpoint.EndpointRouteBuilder;
 import org.apache.camel.component.http.HttpMethods;
 import org.apache.camel.model.rest.RestBindingMode;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.apache.camel.model.rest.RestParamType;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
+import org.springframework.web.util.UriTemplate;
 import lombok.RequiredArgsConstructor;
-import uk.gov.crowncommercial.dsd.api.catalogue.config.Constants;
 import uk.gov.crowncommercial.dsd.api.catalogue.logic.RequestValidator;
 import uk.gov.crowncommercial.dsd.api.catalogue.logic.SpreeProductListRequestComposer;
 import uk.gov.crowncommercial.dsd.api.catalogue.model.ApiError;
 import uk.gov.crowncommercial.dsd.api.catalogue.model.Errors;
+import uk.gov.crowncommercial.dsd.api.catalogue.model.GetProductResponse;
 import uk.gov.crowncommercial.dsd.api.catalogue.model.ListProductsResponse;
 
 /**
@@ -38,13 +39,13 @@ public class CatalogueServiceRouteBuilder extends EndpointRouteBuilder {
   private String apiListProducts;
 
   @Value("${api.paths.get-product}")
-  private String apiGetProducts;
+  private String apiGetProduct;
 
-  @Autowired
-  private RequestValidator requestValidator;
+  @Value("${spree.api.paths.get-product}")
+  private String spreeApiPathsGetProduct;
 
-  @Autowired
-  private SpreeProductListRequestComposer spreeProductListRequestComposer;
+  private final RequestValidator requestValidator;
+  private final SpreeProductListRequestComposer spreeProductListRequestComposer;
 
   @Override
   public void configure() throws Exception {
@@ -56,6 +57,7 @@ public class CatalogueServiceRouteBuilder extends EndpointRouteBuilder {
     restConfiguration()
       .component("servlet")
       .bindingMode(RestBindingMode.json)
+      .skipBindingOnErrorCode(false)
       .clientRequestValidation(true)
       .enableCORS(true);
 
@@ -74,21 +76,16 @@ public class CatalogueServiceRouteBuilder extends EndpointRouteBuilder {
       .to(ROUTE_FINALISE_RESPONSE);
 
     /*
-     * GET Products
-     *
-     * TODO: Expand to invoke Spree API v2 `api/v2/storefront/products` endpoint with filters etc and transform in accordance with:
-     * https://github.com/Crown-Commercial-Service/ccs-scale-api-definitions/blob/SCA-1516-Catalog-Service-Iteration-1/catalogue/catalogue-service.yaml
+     * List Products
      */
     rest(apiBasePath)
       .get(apiListProducts)
-      .skipBindingOnErrorCode(false)
       .outType(ListProductsResponse.class)
-      .produces(Constants.MEDIATYPE_APP_VND_JSON)
       .to(ROUTE_LIST_PRODUCTS);
 
     from(ROUTE_LIST_PRODUCTS)
       .routeId(ROUTE_ID_LIST_PRODUCTS)
-      .log(LoggingLevel.INFO, "Endpoint get-products invoked")
+      .log(LoggingLevel.INFO, "Endpoint list-products invoked")
 
       // Validate request
       .process(requestValidator)
@@ -101,16 +98,65 @@ public class CatalogueServiceRouteBuilder extends EndpointRouteBuilder {
 
       // Log headers prior to Spree API invocation
       .to("log:DEBUG?showBody=false&showHeaders=true")
-      .to("http://spree-api?headerFilterStrategy=#spreeApiHeaderFilter")
+      .to("http://spree-api-list-products?headerFilterStrategy=#spreeApiHeaderFilter")
 
       .unmarshal().json()
       .to("log:DEBUG?showBody=false&showHeaders=true")
+      // Filter image data into exchange prop
+      .setProperty(EXPROP_SPREE_IMAGE_DATA, jsonpath("$.included[?(@.type == 'image')]"))
       .convertBodyTo(ListProductsResponse.class)
+      .to(ROUTE_FINALISE_RESPONSE);
+
+    /*
+     * Get product
+     */
+    rest(apiBasePath)
+      .get(apiGetProduct)
+      .outType(GetProductResponse.class)
+      .param().name("id").type(RestParamType.path).required(TRUE).dataType("string").endParam()
+      .to(ROUTE_GET_PRODUCT);
+
+    from(ROUTE_GET_PRODUCT)
+      .routeId(ROUTE_ID_GET_PRODUCT)
+      .log(LoggingLevel.INFO, "Endpoint get-product invoked for product id: ${header.id}")
+
+      // Validate request?
+      .process(requestValidator)
+
+      // Don't bridge - can set a predictable endpoint URI to identify the component in tests.
+      .setHeader(Exchange.HTTP_METHOD, constant(HttpMethods.GET))
+
+      // TODO: URI template for path params..
+      .process(e -> e.getIn().setHeader("SpreeApiPathGetProductExpanded",
+          new UriTemplate(spreeApiPathsGetProduct).expand(Map.of("id", e.getIn().getHeader("id")))))
+      .log(LoggingLevel.INFO, "${header.SpreeApiPathGetProductExpanded}")
+      .setHeader(Exchange.HTTP_URI,  simple("{{SPREE_API_HOST}}{{spree.api.paths.base}}${header.SpreeApiPathGetProductExpanded}"))
+      .setHeader(HttpHeaders.ACCEPT, constant(MediaType.APPLICATION_JSON_VALUE))
+
+      // Log headers prior to Spree API invocation
+      .to("log:DEBUG?showBody=false&showHeaders=true")
+
+      // TODO: Why necessary - interferes with invoked URL otherwise(?)
+      .removeHeader(Exchange.HTTP_PATH)
+      .to("http://spree-api-get-product?headerFilterStrategy=#spreeApiHeaderFilter")
+
+      .unmarshal().json()
+      .to("log:DEBUG?showBody=false&showHeaders=true")
+
+      .setProperty(EXPROP_SPREE_IMAGE_DATA, jsonpath("$.included[?(@.type == 'image')]"))
+      .convertBodyTo(GetProductResponse.class)
+
       .to(ROUTE_FINALISE_RESPONSE);
 
     from(ROUTE_FINALISE_RESPONSE)
       .removeHeaders("*");
     // @formatter:on
+  }
+
+  public static void main(final String[] args) {
+    final UriTemplate uriTemplate = new UriTemplate(
+        "/products/{id}?include=default_variant,variants,images,product_properties");
+    System.out.println(uriTemplate.expand(Map.of("id", 35)).toString());
   }
 
 }

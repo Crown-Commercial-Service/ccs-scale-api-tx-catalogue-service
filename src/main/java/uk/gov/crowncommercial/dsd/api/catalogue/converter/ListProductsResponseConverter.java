@@ -1,8 +1,8 @@
 package uk.gov.crowncommercial.dsd.api.catalogue.converter;
 
+import static uk.gov.crowncommercial.dsd.api.catalogue.config.Constants.EXPROP_SPREE_IMAGE_DATA;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 import org.apache.camel.Converter;
 import org.apache.camel.Exchange;
 import org.apache.camel.TypeConverter;
@@ -33,16 +33,11 @@ public class ListProductsResponseConverter implements TypeConverters {
     final TypeConverter converter = exchange.getContext().getTypeConverter();
     final ListProductsResponseBuilder responseBuilder = ListProductsResponse.builder();
 
-    // Filter the include data to images only:
-    final List<Map<String, Object>> imagesData =
-        ((List<Map<String, Object>>) spreeResponse.get("included")).parallelStream()
-            .filter(included -> included.getOrDefault("type", "").equals("image"))
-            .collect(Collectors.toList());
-
     // Convert products and add image data
     ((List<Map<String, Object>>) spreeResponse.get("data")).stream()
         .map(productConverter::toProduct)
-        .map(p -> productConverter.addImagesToProduct(p, imagesData))
+        .map(p -> productConverter.addImagesToProduct(p,
+            exchange.getProperty(EXPROP_SPREE_IMAGE_DATA, List.class)))
         .forEach(responseBuilder::product);
 
     // Convert meta data

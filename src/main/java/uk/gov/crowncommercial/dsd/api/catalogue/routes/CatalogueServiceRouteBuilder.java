@@ -144,6 +144,9 @@ public class CatalogueServiceRouteBuilder extends EndpointRouteBuilder {
       .to("log:DEBUG?showBody=false&showHeaders=true")
 
       .setProperty(EXPROP_SPREE_IMAGE_DATA, jsonpath("$.included[?(@.type == 'image')]"))
+      .setProperty(EXPROP_SPREE_SPREE_VARIANT_DATA, jsonpath("$.included[?(@.type in ['variant', 'vendor', 'catalog', 'delivery_charges'])]"))
+      .setProperty(EXPROP_SPREE_INCLUDES_DATA, jsonpath("$.included"))
+
       .convertBodyTo(GetProductResponse.class)
 
       .to(ROUTE_FINALISE_RESPONSE);

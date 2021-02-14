@@ -24,20 +24,22 @@ public class GetProductResponseConverter implements TypeConverters {
 
   @SuppressWarnings("unchecked")
   @Converter
-  public GetProductResponse toGetProductResponse(final Map<String, Object> data,
+  public GetProductResponse toGetProductResponse(final Map<String, Object> spreeResponse,
       final Exchange exchange) {
 
     final TypeConverter converter = exchange.getContext().getTypeConverter();
     final GetProductResponseBuilder responseBuilder = GetProductResponse.builder();
 
-    // Basic product conversion
+    // Convert basic Product attributes
     final Product product =
-        converter.convertTo(Product.class, (Map<String, Object>) data.get("data"));
-    productConverter.addImagesToProduct(product,
-        exchange.getProperty(EXPROP_SPREE_IMAGE_DATA, List.class));
+        converter.convertTo(Product.class, (Map<String, Object>) spreeResponse.get("data"));
+
+    // Add Images
+    productConverter.addImages(product, exchange.getProperty(EXPROP_SPREE_IMAGE_DATA, List.class));
     responseBuilder.product(product);
 
-    // TODO: the other bits..
+    // Add SupplierCatalogProductInstances
+    productConverter.addSupplierCatalogProductInstances(product, spreeResponse);
 
     return responseBuilder.build();
   }

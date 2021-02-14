@@ -36,7 +36,7 @@ public class ListProductsResponseConverter implements TypeConverters {
     // Convert products and add image data
     ((List<Map<String, Object>>) spreeResponse.get("data")).stream()
         .map(productConverter::toProduct)
-        .map(p -> productConverter.addImagesToProduct(p,
+        .map(p -> productConverter.addImages(p,
             exchange.getProperty(EXPROP_SPREE_IMAGE_DATA, List.class)))
         .forEach(responseBuilder::product);
 

@@ -14,5 +14,7 @@ public final class Constants {
 
   // Custom Exchange properties
   public static final String EXPROP_SPREE_IMAGE_DATA = "SpreeImageData";
+  public static final String EXPROP_SPREE_SPREE_VARIANT_DATA = "SpreeVariantData";
+  public static final String EXPROP_SPREE_INCLUDES_DATA = "SpreeIncludesData";
 
 }

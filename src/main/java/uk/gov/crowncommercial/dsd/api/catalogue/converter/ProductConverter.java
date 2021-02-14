@@ -13,9 +13,7 @@ import com.jayway.jsonpath.DocumentContext;
 import com.jayway.jsonpath.JsonPath;
 import com.jayway.jsonpath.TypeRef;
 import lombok.extern.slf4j.Slf4j;
-import uk.gov.crowncommercial.dsd.api.catalogue.model.Image;
-import uk.gov.crowncommercial.dsd.api.catalogue.model.Product;
-import uk.gov.crowncommercial.dsd.api.catalogue.model.SupplierCatalogProductInstance;
+import uk.gov.crowncommercial.dsd.api.catalogue.model.*;
 
 /**
  * Product conversion utilities
@@ -64,26 +62,61 @@ public class ProductConverter implements TypeConverters {
   }
 
   /**
+   * Extract and unmarshal the Spree variant include data and required related objects (vendor,
+   * catalog, delivery_charges) into a collection of {@link SupplierCatalogProductInstance}
    *
    * @param product
-   * @param includesData
-   * @return
+   * @param spreeResponse
+   * @return the enriched product
    */
   public Product addSupplierCatalogProductInstances(final Product product,
       final Map<String, Object> spreeResponse) {
 
     final DocumentContext docContext = JsonPath.parse(spreeResponse);
 
-    // Filter included data objs for type = "variant" and tx to root type
-    // SupplierCatalogProductInstance:
-
+    /*
+     * Filter included data objs for type = "variant" and tx to root type
+     * SupplierCatalogProductInstance:
+     */
     final List<SupplierCatalogProductInstance> supplierCatalogProductInstances =
         docContext.read("$.included[?(@.type == 'variant')]",
             new TypeRef<List<SupplierCatalogProductInstance>>() {});
 
-    // For each variant (aka. SupplierCatalogProductInstance), find the relationship `id` for
-    // `vendor` (Supplier),`catalog` (CommercialAgreementLot) and `product_delivery_charges`
-    // (ProductDeliveryCharges)
+    /*
+     * For each variant (aka. SupplierCatalogProductInstance), find the relationship `id` for
+     * `vendor` (Supplier),`catalog` (CommercialAgreementLot) and `delivery_charges`
+     * (ProductDeliveryCharges), then find and read the relevant object and set on the SCPI
+     */
+    supplierCatalogProductInstances.stream().forEach(scpi -> {
+
+      // Cannot do this in one unfortunately (https://github.com/json-path/JsonPath/issues/272)
+      final List<?> variantJSON =
+          JsonPath.read(spreeResponse, "$.included[?(@.type == 'variant' && @.id == '"
+              + scpi.getSupplierProductCatalogInstanceId() + "')]");
+
+      final String vendorId = JsonPath.read(variantJSON, "$[0].relationships.vendor.data.id");
+      final String catalogId = JsonPath.read(variantJSON, "$[0].relationships.catalog.data.id");
+      final String deliveryChargesId =
+          JsonPath.read(variantJSON, "$[0].relationships.delivery_charges.data.id");
+
+      final Supplier supplier =
+          docContext.read("$.included[?(@.type == 'vendor' && @.id == '" + vendorId + "')]",
+              new TypeRef<List<Supplier>>() {}).get(0);
+
+      final CommercialAgreementLot cal =
+          docContext.read("$.included[?(@.type == 'catalog' && @.id == '" + catalogId + "')]",
+              new TypeRef<List<CommercialAgreementLot>>() {}).get(0);
+
+      final ProductDeliveryCharges pdcs =
+          docContext
+              .read("$.included[?(@.type == 'product_delivery_charges' && @.id == '"
+                  + deliveryChargesId + "')]", new TypeRef<List<ProductDeliveryCharges>>() {})
+              .get(0);
+
+      scpi.setSupplier(supplier);
+      scpi.setCommercialAgreementLot(cal);
+      scpi.setProductDeliveryCharges(pdcs);
+    });
 
     product.setSupplierCatalogProductInstances(supplierCatalogProductInstances);
 

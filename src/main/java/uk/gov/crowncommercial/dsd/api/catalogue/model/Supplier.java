@@ -1,20 +1,42 @@
 package uk.gov.crowncommercial.dsd.api.catalogue.model;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Value;
+import com.fasterxml.jackson.annotation.JsonProperty.Access;
+import com.fasterxml.jackson.annotation.JsonUnwrapped;
+import lombok.Data;
 
 /**
  * Supplier
  */
-@Value
+@Data
 public class Supplier {
+
+  @Data
+  private static class Attributes {
+
+    @JsonProperty("name")
+    private String name;
+
+    @JsonProperty("aboutUs")
+    @JsonAlias("about_us")
+    private String aboutUs;
+  }
 
   @JsonProperty("id")
   private String id;
 
-  @JsonProperty("name")
-  private String name;
+  // Deserialize ONLY
+  @JsonProperty(access = Access.WRITE_ONLY)
+  private Attributes attributes;
 
-  @JsonProperty("aboutUs")
-  private String aboutUs;
+  /**
+   * Serialize unwrapped
+   *
+   * @return attributes
+   */
+  @JsonUnwrapped
+  public Attributes getBasicAttributes() {
+    return attributes;
+  }
 }

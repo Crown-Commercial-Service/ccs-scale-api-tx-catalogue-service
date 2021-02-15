@@ -36,8 +36,7 @@ public class ProductConverter implements TypeConverters {
   @Converter
   public Product toProduct(final Map<String, Object> productData) {
 
-    final Product product = objectMapper
-        .convertValue((Map<String, Object>) productData.get("attributes"), Product.class);
+    final Product product = objectMapper.convertValue(productData.get("attributes"), Product.class);
     product.setId((String) productData.get("id"));
 
     return product;

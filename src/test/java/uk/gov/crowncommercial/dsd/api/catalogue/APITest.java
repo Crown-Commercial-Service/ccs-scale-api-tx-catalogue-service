@@ -3,6 +3,7 @@ package uk.gov.crowncommercial.dsd.api.catalogue;
 import static io.restassured.RestAssured.given;
 import static org.apache.http.HttpStatus.SC_OK;
 import static org.hamcrest.CoreMatchers.is;
+import static uk.gov.crowncommercial.dsd.api.catalogue.config.Constants.ENDPOINT_SPREE_API_LIST_PRODUCTS;
 import org.apache.camel.CamelContext;
 import org.apache.camel.EndpointInject;
 import org.apache.camel.builder.AdviceWith;
@@ -24,9 +25,9 @@ import uk.gov.crowncommercial.dsd.api.catalogue.config.Constants;
 
 @RunWith(CamelSpringBootRunner.class)
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
-@MockEndpointsAndSkip("http://spree-api")
+@MockEndpointsAndSkip("http://spree-api*")
 @ActiveProfiles("test")
-public class APITest {
+class APITest {
 
   @Value("${api.paths.base}")
   private String apiBasePath;
@@ -40,8 +41,8 @@ public class APITest {
   @LocalServerPort
   private int port;
 
-  @EndpointInject("mock:http://spree-api")
-  protected MockEndpoint spree;
+  @EndpointInject("mock:" + ENDPOINT_SPREE_API_LIST_PRODUCTS)
+  protected MockEndpoint mockEndpointSpreeListProducts;
 
   @BeforeEach
   public void setUp() {
@@ -50,12 +51,12 @@ public class APITest {
   }
 
   @Test
-  public void listProducts() throws Exception {
+  void listProducts() throws Exception {
 
     // Mock the behaviour of the Spree v2 API
     AdviceWith.adviceWith(camelContext, Constants.ROUTE_ID_LIST_PRODUCTS, builder -> {
-      builder.weaveByToUri("http://spree-api").replace().setBody()
-          .constant("{\"products\": [], \"meta\": {}, \"listLinks\": {} }");
+      builder.weaveByToUri(ENDPOINT_SPREE_API_LIST_PRODUCTS + "*").replace().setBody()
+          .constant(getClass().getResourceAsStream("/spree-json/ListProductsSingle.json"));
     });
 
     /*
@@ -63,7 +64,7 @@ public class APITest {
      */
     // @formatter:off
     given()
-      .param("param1", "foo")
+      .param("filter[ids]", "3")
       // etc
     .when()
       .get(apiListProducts)
@@ -71,7 +72,7 @@ public class APITest {
       .statusCode(SC_OK)
       .contentType(ContentType.JSON)
       //.etc etc etc
-      .body("products.size()", is(0));
+      .body("products.size()", is(1));
     // @formatter:on
   }
 

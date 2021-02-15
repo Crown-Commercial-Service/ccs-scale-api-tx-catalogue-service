@@ -6,10 +6,10 @@ import lombok.Builder;
 import lombok.Singular;
 
 /**
- * Errors
+ * ApiErrors
  */
 @Builder
-public class Errors {
+public class ApiErrors {
 
   @JsonProperty("errors")
   @Singular

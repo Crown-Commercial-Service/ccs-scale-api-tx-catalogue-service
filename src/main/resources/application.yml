@@ -7,6 +7,8 @@ camel:
       mapping:
         # Important: must match any proxy request from API Gateway
         contextPath: /*
+#    http:
+#      header-filter-strategy: #spreeApiHeaderFilter
         
   dataformat:
     json-jackson:
@@ -21,7 +23,7 @@ logging:
     org.springframework: INFO
     org.apache.tomcat: INFO
     org.apache.catalina: INFO
-    # org.apache.http: DEBUG
+    org.apache.http: DEBUG
     
 server:
   port: 9030
@@ -44,7 +46,13 @@ spree:
       base: /api/v2/storefront
       list-products: /products
       get-product: /products/{id}?include=default_variant,default_variant.vendor,variants,variants.option_values,documents,variants.delivery_charges,variants.vendor,variants.catalog,option_types,product_properties,images,manufacturer
-      
+    
+    # Allowed 'pass-through' API query parameters to be sent to Spree
+    pass-through-params:
+      list-products:
+        filter: ids, skus, price, manufacturers, categories, name, in_stock
+        other: filter[properties][property_id], sort_by, page, per_page
+    
 ---
 spring:
   profiles: local

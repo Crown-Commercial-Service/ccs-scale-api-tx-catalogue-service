@@ -34,8 +34,7 @@ public class GetProductResponseConverter implements TypeConverters {
     final GetProductResponseBuilder responseBuilder = GetProductResponse.builder();
 
     // Convert basic Product attributes
-    final Product product =
-        converter.convertTo(Product.class, (Map<String, Object>) spreeResponse.get("data"));
+    final Product product = converter.convertTo(Product.class, spreeResponse.get("data"));
 
     // Add Images
     productConverter.addImages(product, exchange.getProperty(EXPROP_SPREE_IMAGE_DATA, List.class));

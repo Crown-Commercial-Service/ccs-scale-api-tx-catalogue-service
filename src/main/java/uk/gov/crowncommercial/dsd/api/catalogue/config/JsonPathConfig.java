@@ -13,7 +13,7 @@ import com.jayway.jsonpath.spi.mapper.MappingProvider;
 import lombok.RequiredArgsConstructor;
 
 /**
- * TODO: Javadoc
+ * Configure JsonPath to use a) Jackson and b) our nicely pre-configured {@link #objectMapper}
  */
 @Configuration
 @RequiredArgsConstructor

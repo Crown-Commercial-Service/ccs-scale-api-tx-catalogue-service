@@ -17,7 +17,6 @@ import uk.gov.crowncommercial.dsd.api.catalogue.model.ProductListMeta;
 /**
  * Converter for Spree List Products response to CS {@link ListProductsResponse}
  *
- * TODO: Replace some of the map shenanigans with JSONPath or better use of objectmapper.
  */
 @Component
 public class ListProductsResponseConverter implements TypeConverters {

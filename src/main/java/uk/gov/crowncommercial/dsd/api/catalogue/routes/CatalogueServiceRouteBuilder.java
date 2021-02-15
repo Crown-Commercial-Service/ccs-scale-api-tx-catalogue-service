@@ -141,11 +141,11 @@ public class CatalogueServiceRouteBuilder extends EndpointRouteBuilder {
       .to("http://spree-api-get-product?headerFilterStrategy=#spreeApiHeaderFilter")
 
       .unmarshal().json()
-      .to("log:DEBUG?showBody=false&showHeaders=true")
+      .to("log:DEBUG?showBody=true&showHeaders=true")
 
       .setProperty(EXPROP_SPREE_IMAGE_DATA, jsonpath("$.included[?(@.type == 'image')]"))
-      .setProperty(EXPROP_SPREE_SPREE_VARIANT_DATA, jsonpath("$.included[?(@.type in ['variant', 'vendor', 'catalog', 'delivery_charges'])]"))
-      .setProperty(EXPROP_SPREE_INCLUDES_DATA, jsonpath("$.included"))
+      .setProperty(EXPROP_SPREE_DOCUMENT_DATA, jsonpath("$.included[?(@.type == 'document')].attributes"))
+      .setProperty(EXPROP_SPREE_PRODUCT_PROPS_DATA, jsonpath("$.included[?(@.type == 'product_property')].attributes"))
 
       .convertBodyTo(GetProductResponse.class)
 

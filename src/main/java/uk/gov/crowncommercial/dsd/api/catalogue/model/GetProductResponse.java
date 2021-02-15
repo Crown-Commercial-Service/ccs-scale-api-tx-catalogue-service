@@ -13,5 +13,5 @@ public class GetProductResponse {
   private final Product product;
 
   @JsonProperty("meta")
-  private final Object meta;
+  private final GetProductMeta meta;
 }

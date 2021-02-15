@@ -1,6 +1,6 @@
 package uk.gov.crowncommercial.dsd.api.catalogue.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonAlias;
 import lombok.Value;
 
 /**
@@ -8,13 +8,10 @@ import lombok.Value;
  */
 @Value
 public class Document {
-  @JsonProperty("group")
-  private String group;
 
-  @JsonProperty("url")
+  private String group;
   private String url;
 
-  @JsonProperty("contentType")
+  @JsonAlias("content_type")
   private String contentType;
 }
-

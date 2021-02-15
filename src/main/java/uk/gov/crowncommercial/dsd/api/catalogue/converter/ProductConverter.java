@@ -8,6 +8,7 @@ import org.apache.camel.Converter;
 import org.apache.camel.TypeConverters;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.jayway.jsonpath.DocumentContext;
 import com.jayway.jsonpath.JsonPath;
@@ -121,6 +122,17 @@ public class ProductConverter implements TypeConverters {
     product.setSupplierCatalogProductInstances(supplierCatalogProductInstances);
 
     return product;
+  }
+
+  public void addDocuments(final Product product, final List<Map<String, Object>> documentData) {
+    product.setDocuments(
+        objectMapper.convertValue(documentData, new TypeReference<List<Document>>() {}));
+  }
+
+  public void addProductProperties(final Product product,
+      final List<Map<String, Object>> productPropertyData) {
+    product.setProductProperties(objectMapper.convertValue(productPropertyData,
+        new TypeReference<List<ProductProperty>>() {}));
   }
 
 }

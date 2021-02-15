@@ -23,7 +23,7 @@ logging:
     org.springframework: INFO
     org.apache.tomcat: INFO
     org.apache.catalina: INFO
-    org.apache.http: DEBUG
+    # org.apache.http: DEBUG
     
 server:
   port: 9030

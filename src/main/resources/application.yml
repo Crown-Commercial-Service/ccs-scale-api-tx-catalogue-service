@@ -1,0 +1,69 @@
+camel:
+  springboot:
+    name: ScaleAPITxCatalogueService
+  
+  component:
+    servlet:
+      mapping:
+        # Important: must match any proxy request from API Gateway
+        contextPath: /*
+#    http:
+#      header-filter-strategy: #spreeApiHeaderFilter
+        
+  dataformat:
+    json-jackson:
+      object-mapper: jacksonObjectMapper
+      disable-features: FAIL_ON_EMPTY_BEANS
+      
+          
+logging:
+  level:
+    uk.gov.crowncommercial.dsd.api.catalogue: INFO
+    org.apache.camel: INFO
+    org.springframework: INFO
+    org.apache.tomcat: INFO
+    org.apache.catalina: INFO
+    # org.apache.http: DEBUG
+    
+server:
+  port: 9030
+  tomcat:
+    relaxed-query-chars: "[,]"
+    accesslog:
+      enabled: true
+
+# Route configuration
+api:
+  paths:
+    base: /catalogue
+    list-products: /products
+    get-product: /products/{id}
+    
+# Spree (Specify `SPREE_API_HOST` via environment)
+spree:
+  api:
+    paths:
+      base: /api/v2/storefront
+      list-products: /products
+      get-product: /products/{id}?include=default_variant,default_variant.vendor,variants,variants.option_values,documents,variants.delivery_charges,variants.vendor,variants.catalog,option_types,product_properties,images,manufacturer
+    
+    # Allowed 'pass-through' API query parameters to be sent to Spree
+    pass-through-params:
+      list-products:
+        filter: ids, skus, price, manufacturers, categories, name, in_stock
+        other: filter[properties][property_id], sort_by, page, per_page
+    
+---
+spring:
+  profiles: local
+camel:
+  component:
+    servlet:
+      mapping:
+        # Mimic API Gateway path prefix (allows switching envs between local and AWS in Postman)
+        contextPath: /catalogue-service/*
+        
+logging:
+  level:
+    uk.gov.crowncommercial.dsd.api.catalogue: DEBUG        
+      

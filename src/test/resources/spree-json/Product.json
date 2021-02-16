@@ -1,0 +1,258 @@
+{
+	"id": "35",
+	"type": "product",
+	"attributes": {
+		"name": "Compaq Deskpro 2000 Abacus",
+		"description": "It connects ye olde interwebs",
+		"slug": "9147c7d1-858f-4023-8935-c06c0bbca7b6",
+		"delivery_included_price": "502.00",
+		"price": "500.00",
+		"currency": "USD",
+		"display_delivery_included_price": "504.00",
+		"display_price": "510.00",
+		"meta_description": null,
+		"meta_keywords": null,
+		"mpn_number": "244502-056",
+		"cnet_id": "S0000050",
+		"unspsc": null,
+		"available_on": "2021-01-27T12:38:21.000+00:00",
+		"updated_at": "2021-01-27T12:38:21.000+00:00",
+		"purchasable": true,
+		"in_stock": true,
+		"backorderable": false,
+		"available": true,
+		"key_selling_points": "keyboard, big monitor, mouse, floppy",
+		"total_on_hand": 8,
+		"active": false,
+		"manufacturer": "Compaq"
+	},
+	"relationships": {
+		"variants": {
+			"data": [
+				{
+					"id": "159162",
+					"type": "variant"
+				}
+			]
+		},
+		"option_types": {
+			"data": [
+				{
+					"id": "9",
+					"type": "option_type"
+				}
+			]
+		},
+		"product_properties": {
+			"data": [
+				{
+					"id": "786",
+					"type": "product_property"
+				},
+				{
+					"id": "787",
+					"type": "product_property"
+				},
+				{
+					"id": "788",
+					"type": "product_property"
+				},
+				{
+					"id": "789",
+					"type": "product_property"
+				},
+				{
+					"id": "790",
+					"type": "product_property"
+				},
+				{
+					"id": "791",
+					"type": "product_property"
+				},
+				{
+					"id": "792",
+					"type": "product_property"
+				},
+				{
+					"id": "793",
+					"type": "product_property"
+				},
+				{
+					"id": "794",
+					"type": "product_property"
+				},
+				{
+					"id": "795",
+					"type": "product_property"
+				},
+				{
+					"id": "796",
+					"type": "product_property"
+				},
+				{
+					"id": "797",
+					"type": "product_property"
+				},
+				{
+					"id": "798",
+					"type": "product_property"
+				},
+				{
+					"id": "799",
+					"type": "product_property"
+				},
+				{
+					"id": "800",
+					"type": "product_property"
+				},
+				{
+					"id": "801",
+					"type": "product_property"
+				},
+				{
+					"id": "802",
+					"type": "product_property"
+				},
+				{
+					"id": "803",
+					"type": "product_property"
+				},
+				{
+					"id": "804",
+					"type": "product_property"
+				},
+				{
+					"id": "805",
+					"type": "product_property"
+				},
+				{
+					"id": "806",
+					"type": "product_property"
+				},
+				{
+					"id": "807",
+					"type": "product_property"
+				},
+				{
+					"id": "808",
+					"type": "product_property"
+				},
+				{
+					"id": "809",
+					"type": "product_property"
+				},
+				{
+					"id": "810",
+					"type": "product_property"
+				},
+				{
+					"id": "811",
+					"type": "product_property"
+				},
+				{
+					"id": "812",
+					"type": "product_property"
+				},
+				{
+					"id": "813",
+					"type": "product_property"
+				},
+				{
+					"id": "814",
+					"type": "product_property"
+				},
+				{
+					"id": "815",
+					"type": "product_property"
+				},
+				{
+					"id": "816",
+					"type": "product_property"
+				},
+				{
+					"id": "817",
+					"type": "product_property"
+				},
+				{
+					"id": "818",
+					"type": "product_property"
+				},
+				{
+					"id": "819",
+					"type": "product_property"
+				},
+				{
+					"id": "820",
+					"type": "product_property"
+				},
+				{
+					"id": "821",
+					"type": "product_property"
+				},
+				{
+					"id": "822",
+					"type": "product_property"
+				},
+				{
+					"id": "823",
+					"type": "product_property"
+				},
+				{
+					"id": "824",
+					"type": "product_property"
+				}
+			]
+		},
+		"taxons": {
+			"data": [
+				{
+					"id": "6",
+					"type": "taxon"
+				},
+				{
+					"id": "5",
+					"type": "taxon"
+				},
+				{
+					"id": "4",
+					"type": "taxon"
+				},
+				{
+					"id": "3",
+					"type": "taxon"
+				},
+				{
+					"id": "2",
+					"type": "taxon"
+				}
+			]
+		},
+		"documents": {
+			"data": []
+		},
+		"images": {
+			"data": [
+				{
+					"id": "38435",
+					"type": "image"
+				},
+				{
+					"id": "75691",
+					"type": "image"
+				}
+			]
+		},
+		"default_variant": {
+			"data": {
+				"id": "159162",
+				"type": "variant"
+			}
+		},
+		"manufacturer": {
+			"data": {
+				"id": "15",
+				"type": "manufacturer"
+			}
+		}
+	}
+}

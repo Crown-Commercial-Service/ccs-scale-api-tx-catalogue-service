@@ -18,7 +18,7 @@ camel:
           
 logging:
   level:
-    uk.gov.crowncommercial.dsd.api.catalogue: DEBUG
+    uk.gov.crowncommercial.dsd.api.catalogue: INFO
     org.apache.camel: INFO
     org.springframework: INFO
     org.apache.tomcat: INFO
@@ -62,4 +62,8 @@ camel:
       mapping:
         # Mimic API Gateway path prefix (allows switching envs between local and AWS in Postman)
         contextPath: /catalogue-service/*
+        
+logging:
+  level:
+    uk.gov.crowncommercial.dsd.api.catalogue: DEBUG        
       

@@ -15,6 +15,11 @@ public final class Constants {
   public static final String ROUTE_GET_PRODUCT = "direct:" + ROUTE_ID_GET_PRODUCT;
   public static final String ROUTE_FINALISE_RESPONSE = "direct:finalise-response";
 
+  public static final String ENDPOINT_DEBUG_LOG_BODY_AND_HEADERS =
+      "log:DEBUG?showBody=true&showHeaders=true";
+  public static final String ENDPOINT_DEBUG_LOG_HEADERS =
+      "log:DEBUG?showBody=false&showHeaders=true";
+
   // Spree HTTP Endpoints
   public static final String ENDPOINT_SPREE_API_LIST_PRODUCTS = "http://spree-api-list-products";
   public static final String ENDPOINT_SPREE_API_GET_PRODUCT = "http://spree-api-get-product";

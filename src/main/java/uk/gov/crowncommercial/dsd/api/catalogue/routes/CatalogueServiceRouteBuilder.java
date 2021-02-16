@@ -105,12 +105,12 @@ public class CatalogueServiceRouteBuilder extends EndpointRouteBuilder {
       .setHeader(HttpHeaders.ACCEPT, constant(MediaType.APPLICATION_JSON_VALUE))
 
       // Log headers prior to Spree API invocation
-      .to("log:DEBUG?showBody=false&showHeaders=true")
+      .to(ENDPOINT_DEBUG_LOG_HEADERS)
       .to(ENDPOINT_SPREE_API_LIST_PRODUCTS +  "?headerFilterStrategy=#spreeApiHeaderFilter")
       //.to(ENDPOINT_SPREE_API_LIST_PRODUCTS)
 
       .unmarshal().json()
-      .to("log:DEBUG?showBody=false&showHeaders=true")
+      .to(ENDPOINT_DEBUG_LOG_BODY_AND_HEADERS)
       // Filter image data into exchange prop
       .setProperty(EXPROP_SPREE_IMAGE_DATA, jsonpath("$.included[?(@.type == 'image')]"))
       .convertBodyTo(ListProductsResponse.class)
@@ -137,19 +137,16 @@ public class CatalogueServiceRouteBuilder extends EndpointRouteBuilder {
 
       .process(e -> e.getIn().setHeader("SpreeApiPathGetProductExpanded",
           new UriTemplate(spreeApiPathsGetProduct).expand(Map.of("id", e.getIn().getHeader("id")))))
-      .log(LoggingLevel.INFO, "${header.SpreeApiPathGetProductExpanded}")
       .setHeader(Exchange.HTTP_URI,  simple("{{SPREE_API_HOST}}{{spree.api.paths.base}}${header.SpreeApiPathGetProductExpanded}"))
       .setHeader(HttpHeaders.ACCEPT, constant(MediaType.APPLICATION_JSON_VALUE))
-
-      // Log headers prior to Spree API invocation
-      .to("log:DEBUG?showBody=false&showHeaders=true")
+      .to(ENDPOINT_DEBUG_LOG_HEADERS)
 
       // TODO: Why necessary - interferes with invoked URL otherwise(?)
       .removeHeader(Exchange.HTTP_PATH)
       .to(ENDPOINT_SPREE_API_GET_PRODUCT + "?headerFilterStrategy=#spreeApiHeaderFilter")
 
       .unmarshal().json()
-      .to("log:DEBUG?showBody=false&showHeaders=true")
+      .to(ENDPOINT_DEBUG_LOG_BODY_AND_HEADERS)
 
       .setProperty(EXPROP_SPREE_IMAGE_DATA, jsonpath("$.included[?(@.type == 'image')]"))
       .setProperty(EXPROP_SPREE_DOCUMENT_DATA, jsonpath("$.included[?(@.type == 'document')].attributes"))

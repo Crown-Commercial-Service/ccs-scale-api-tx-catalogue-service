@@ -8,7 +8,7 @@ import lombok.Data;
  * Get Product meta (no defined schema type)
  */
 @Data
-public class GetProductMeta {
+public class ProductMeta {
 
   @JsonProperty("breadcrumbs")
   private List<BreadcrumbMeta> breadcrumbs;

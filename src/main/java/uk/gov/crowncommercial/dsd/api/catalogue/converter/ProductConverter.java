@@ -13,14 +13,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.jayway.jsonpath.DocumentContext;
 import com.jayway.jsonpath.JsonPath;
 import com.jayway.jsonpath.TypeRef;
-import lombok.extern.slf4j.Slf4j;
 import uk.gov.crowncommercial.dsd.api.catalogue.model.*;
 
 /**
  * Product conversion utilities
  */
 @Component
-@Slf4j
 public class ProductConverter implements TypeConverters {
 
   @Autowired
@@ -32,7 +30,6 @@ public class ProductConverter implements TypeConverters {
    * @param productData the raw Spree product <code>{"data":{}}</code>
    * @return a product
    */
-  @SuppressWarnings("unchecked")
   @Converter
   public Product toProduct(final Map<String, Object> productData) {
 

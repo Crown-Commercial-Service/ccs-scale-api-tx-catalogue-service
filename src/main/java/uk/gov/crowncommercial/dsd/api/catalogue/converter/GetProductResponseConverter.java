@@ -11,7 +11,7 @@ import org.apache.camel.TypeConverter;
 import org.apache.camel.TypeConverters;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import uk.gov.crowncommercial.dsd.api.catalogue.model.GetProductMeta;
+import uk.gov.crowncommercial.dsd.api.catalogue.model.ProductMeta;
 import uk.gov.crowncommercial.dsd.api.catalogue.model.GetProductResponse;
 import uk.gov.crowncommercial.dsd.api.catalogue.model.GetProductResponse.GetProductResponseBuilder;
 import uk.gov.crowncommercial.dsd.api.catalogue.model.Product;
@@ -49,7 +49,7 @@ public class GetProductResponseConverter implements TypeConverters {
         exchange.getProperty(EXPROP_SPREE_PRODUCT_PROPS_DATA, List.class));
 
     // Convert meta data
-    responseBuilder.meta(converter.convertTo(GetProductMeta.class, spreeResponse.get("meta")));
+    responseBuilder.meta(converter.convertTo(ProductMeta.class, spreeResponse.get("meta")));
 
     return responseBuilder.product(product).build();
   }

@@ -1,0 +1,1726 @@
+{
+    "data": {
+        "id": "73",
+        "type": "product",
+        "attributes": {
+            "name": "Compaq Deskpro EN 6266X Model 3200 - DT - PII 266 MHz - RAM 32 MB - HDD 3.2 GB - RAGE PRO - Win95 - monitor: none",
+            "description": "The Deskpro EN series of personal computers sets a new benchmark for performance, adaptability, and cost control in large enterprise computing environments by offering powerful Intel processors. Increasingly powerful hard drives and networking capability make these products the new standard for business computing. The modular design redefines serviceability. Components that are commonly replaced are easily accessible once the hood is removed. No tools are necessary to remove the hood, the hard drives, or even the system board. Coupled with the use of industry standard components, service calls, parts replacement, and the training required performing service and upgrades are minimized and simplified. These and all Deskpro personal computers include a full set of intelligent manageability solutions that deliver easy centralized control and management throughout the PC lifecycle. Perfect for enterprise customers who value comprehensive manageability and maximum expandability from a stable, consistent platform, the Compaq Deskpro EN is the ideal PC for corporate networks. Deskpro EN delivers power and performance and ensures you enjoy the lowest possible cost of ownership over time.",
+            "slug": "3bd11ad7-9f49-4ca2-af55-d1a7174fecc6",
+            "meta_description": null,
+            "meta_keywords": null,
+            "mpn_number": "178902-054",
+            "cnet_id": "S0000097",
+            "unspsc": null,
+            "available_on": "2021-02-05T00:00:00.000+00:00",
+            "updated_at": "2021-02-05T00:00:00.000+00:00",
+            "price": "39.52",
+            "currency": "GBP",
+            "display_price": "£39.52",
+            "delivery_included_price": "41.52",
+            "display_delivery_included_price": "£41.52",
+            "purchasable": true,
+            "in_stock": true,
+            "backorderable": false,
+            "available": true,
+            "key_selling_points": null,
+            "total_on_hand": 50
+        },
+        "relationships": {
+            "variants": {
+                "data": [
+                    {
+                        "id": "209225",
+                        "type": "variant"
+                    }
+                ]
+            },
+            "option_types": {
+                "data": [
+                    {
+                        "id": "9",
+                        "type": "option_type"
+                    }
+                ]
+            },
+            "product_properties": {
+                "data": [
+                    {
+                        "id": "2494",
+                        "type": "product_property"
+                    },
+                    {
+                        "id": "2495",
+                        "type": "product_property"
+                    },
+                    {
+                        "id": "2496",
+                        "type": "product_property"
+                    },
+                    {
+                        "id": "2497",
+                        "type": "product_property"
+                    },
+                    {
+                        "id": "2498",
+                        "type": "product_property"
+                    },
+                    {
+                        "id": "2499",
+                        "type": "product_property"
+                    },
+                    {
+                        "id": "2500",
+                        "type": "product_property"
+                    },
+                    {
+                        "id": "2501",
+                        "type": "product_property"
+                    },
+                    {
+                        "id": "2502",
+                        "type": "product_property"
+                    },
+                    {
+                        "id": "2503",
+                        "type": "product_property"
+                    },
+                    {
+                        "id": "2504",
+                        "type": "product_property"
+                    },
+                    {
+                        "id": "2505",
+                        "type": "product_property"
+                    },
+                    {
+                        "id": "2506",
+                        "type": "product_property"
+                    },
+                    {
+                        "id": "2507",
+                        "type": "product_property"
+                    },
+                    {
+                        "id": "2508",
+                        "type": "product_property"
+                    },
+                    {
+                        "id": "2509",
+                        "type": "product_property"
+                    },
+                    {
+                        "id": "2510",
+                        "type": "product_property"
+                    },
+                    {
+                        "id": "2511",
+                        "type": "product_property"
+                    },
+                    {
+                        "id": "2512",
+                        "type": "product_property"
+                    },
+                    {
+                        "id": "2513",
+                        "type": "product_property"
+                    },
+                    {
+                        "id": "2514",
+                        "type": "product_property"
+                    },
+                    {
+                        "id": "2515",
+                        "type": "product_property"
+                    },
+                    {
+                        "id": "2516",
+                        "type": "product_property"
+                    },
+                    {
+                        "id": "2517",
+                        "type": "product_property"
+                    },
+                    {
+                        "id": "2518",
+                        "type": "product_property"
+                    },
+                    {
+                        "id": "2519",
+                        "type": "product_property"
+                    },
+                    {
+                        "id": "2520",
+                        "type": "product_property"
+                    },
+                    {
+                        "id": "2521",
+                        "type": "product_property"
+                    },
+                    {
+                        "id": "2522",
+                        "type": "product_property"
+                    },
+                    {
+                        "id": "2523",
+                        "type": "product_property"
+                    },
+                    {
+                        "id": "2524",
+                        "type": "product_property"
+                    },
+                    {
+                        "id": "2525",
+                        "type": "product_property"
+                    },
+                    {
+                        "id": "2526",
+                        "type": "product_property"
+                    },
+                    {
+                        "id": "2527",
+                        "type": "product_property"
+                    },
+                    {
+                        "id": "2528",
+                        "type": "product_property"
+                    },
+                    {
+                        "id": "2529",
+                        "type": "product_property"
+                    },
+                    {
+                        "id": "2530",
+                        "type": "product_property"
+                    },
+                    {
+                        "id": "2531",
+                        "type": "product_property"
+                    },
+                    {
+                        "id": "2532",
+                        "type": "product_property"
+                    },
+                    {
+                        "id": "2533",
+                        "type": "product_property"
+                    },
+                    {
+                        "id": "2534",
+                        "type": "product_property"
+                    },
+                    {
+                        "id": "2535",
+                        "type": "product_property"
+                    },
+                    {
+                        "id": "2536",
+                        "type": "product_property"
+                    },
+                    {
+                        "id": "2537",
+                        "type": "product_property"
+                    },
+                    {
+                        "id": "2538",
+                        "type": "product_property"
+                    }
+                ]
+            },
+            "taxons": {
+                "data": [
+                    {
+                        "id": "6",
+                        "type": "taxon"
+                    },
+                    {
+                        "id": "5",
+                        "type": "taxon"
+                    },
+                    {
+                        "id": "4",
+                        "type": "taxon"
+                    },
+                    {
+                        "id": "3",
+                        "type": "taxon"
+                    },
+                    {
+                        "id": "2",
+                        "type": "taxon"
+                    }
+                ]
+            },
+            "documents": {
+                "data": []
+            },
+            "images": {
+                "data": [
+                    {
+                        "id": "82581",
+                        "type": "image"
+                    },
+                    {
+                        "id": "83887",
+                        "type": "image"
+                    }
+                ]
+            },
+            "default_variant": {
+                "data": {
+                    "id": "209225",
+                    "type": "variant"
+                }
+            },
+            "manufacturer": {
+                "data": {
+                    "id": "15",
+                    "type": "manufacturer"
+                }
+            }
+        }
+    },
+    "meta": {
+        "breadcrumbs": [
+            {
+                "id": 1,
+                "name": "Tech Products"
+            },
+            {
+                "id": 2,
+                "name": "Hardware"
+            },
+            {
+                "id": 3,
+                "name": "Systems"
+            },
+            {
+                "id": 4,
+                "name": "Desktops & Workstations"
+            },
+            {
+                "id": 5,
+                "name": "Desktops"
+            },
+            {
+                "id": 6,
+                "name": "Intel Desktops"
+            }
+        ]
+    },
+    "included": [
+        {
+            "id": "133",
+            "type": "vendor",
+            "attributes": {
+                "name": "Bulk Supply",
+                "about_us": ""
+            }
+        },
+        {
+            "id": "209225",
+            "type": "variant",
+            "attributes": {
+                "sku": "015065",
+                "currency": "GBP",
+                "weight": "0.0",
+                "height": null,
+                "width": null,
+                "depth": null,
+                "is_master": true,
+                "options_text": "",
+                "updated_at": "2021-02-05T08:56:12.362+00:00",
+                "total_on_hand": 50,
+                "price": "39.52",
+                "display_price": "£39.52",
+                "delivery_included_price": "41.52",
+                "display_delivery_included_price": "£41.52",
+                "purchasable": true,
+                "in_stock": true,
+                "backorderable": false
+            },
+            "relationships": {
+                "vendor": {
+                    "data": {
+                        "id": "133",
+                        "type": "vendor"
+                    }
+                },
+                "product": {
+                    "data": {
+                        "id": "73",
+                        "type": "product"
+                    }
+                },
+                "option_values": {
+                    "data": []
+                },
+                "catalog": {
+                    "data": {
+                        "id": "133",
+                        "type": "catalog"
+                    }
+                },
+                "delivery_charges": {
+                    "data": {
+                        "id": "97253",
+                        "type": "product_delivery_charges"
+                    }
+                }
+            }
+        },
+        {
+            "id": "97253",
+            "type": "product_delivery_charges",
+            "attributes": {
+                "id": 97253,
+                "standard_charge_product_uk_mainland": "2.0",
+                "standard_charge_basket": "8.0",
+                "standard_charge_product_uk_non_mainland": "4.0",
+                "standard_delivery_time": 2,
+                "next_day_charge_product_uk_mainland": "4.0",
+                "next_day_charge_basket": "15.0",
+                "display_standard_charge_product_uk_mainland": "£2.00",
+                "display_standard_charge_product_uk_non_mainland": "£4.00",
+                "display_next_day_charge_product_uk_mainland": "£4.00"
+            }
+        },
+        {
+            "id": "133",
+            "type": "catalog",
+            "attributes": {
+                "full_name": "RM6147 Tech Products Lot 1",
+                "ca_name": "Tech Products",
+                "ca_ref": "RM6147",
+                "lot_number": "1",
+                "lot_expiry_date": "2021-10-31"
+            }
+        },
+        {
+            "id": "9",
+            "type": "option_type",
+            "attributes": {
+                "name": "General//Colour",
+                "presentation": "Colour",
+                "position": 9,
+                "group": "General"
+            },
+            "relationships": {
+                "option_values": {
+                    "data": [
+                        {
+                            "id": "9",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "12",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "13",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "14",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "15",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "16",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "17",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "18",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "34",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "35",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "36",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "37",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "39",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "42",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "45",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "67",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "68",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "69",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "70",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "71",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "72",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "73",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "74",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "75",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "78",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "79",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "81",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "82",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "83",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "84",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "85",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "86",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "87",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "91",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "92",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "93",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "96",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "97",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "99",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "102",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "103",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "104",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "105",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "106",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "112",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "113",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "114",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "115",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "116",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "117",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "118",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "119",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "126",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "128",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "130",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "131",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "134",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "138",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "139",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "140",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "142",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "143",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "144",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "145",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "146",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "147",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "148",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "150",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "151",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "152",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "153",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "154",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "155",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "156",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "157",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "160",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "161",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "162",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "164",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "166",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "167",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "168",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "169",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "170",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "171",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "179",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "180",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "181",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "182",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "187",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "189",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "191",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "192",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "193",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "199",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "200",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "201",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "202",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "205",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "206",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "207",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "208",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "213",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "218",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "221",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "222",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "223",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "224",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "227",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "228",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "230",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "231",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "234",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "235",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "236",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "237",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "238",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "239",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "240",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "241",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "243",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "245",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "246",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "247",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "248",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "249",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "250",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "252",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "253",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "254",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "255",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "256",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "257",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "258",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "259",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "261",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "262",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "264",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "266",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "267",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "269",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "270",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "271",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "274",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "278",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "279",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "280",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "281",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "282",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "283",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "284",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "288",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "289",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "290",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "291",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "292",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "296",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "300",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "301",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "302",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "303",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "304",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "305",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "306",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "309",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "310",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "311",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "312",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "313",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "314",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "315",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "316",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "317",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "318",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "319",
+                            "type": "option_value"
+                        },
+                        {
+                            "id": "321",
+                            "type": "option_value"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "2494",
+            "type": "product_property",
+            "attributes": {
+                "value": "Plug-in card",
+                "group": "Networking",
+                "name": "Type",
+                "description": "Type"
+            }
+        },
+        {
+            "id": "2495",
+            "type": "product_property",
+            "attributes": {
+                "value": "Small business, corporate business",
+                "group": "General",
+                "name": "Recommended Use",
+                "description": "Recommended Use"
+            }
+        },
+        {
+            "id": "2496",
+            "type": "product_property",
+            "attributes": {
+                "value": "Desktop",
+                "group": "General",
+                "name": "Product Form Factor",
+                "description": "Product Form Factor"
+            }
+        },
+        {
+            "id": "2497",
+            "type": "product_property",
+            "attributes": {
+                "value": "Speaker",
+                "group": "General",
+                "name": "Built-in Devices",
+                "description": "Built-in Devices"
+            }
+        },
+        {
+            "id": "2498",
+            "type": "product_property",
+            "attributes": {
+                "value": "Language: French / region: France",
+                "group": "General",
+                "name": "Localisation",
+                "description": "Localisation"
+            }
+        },
+        {
+            "id": "2499",
+            "type": "product_property",
+            "attributes": {
+                "value": "Intel Pentium II 266 MHz",
+                "group": "Processor / Chipset",
+                "name": "CPU",
+                "description": "CPU"
+            }
+        },
+        {
+            "id": "2500",
+            "type": "product_property",
+            "attributes": {
+                "value": "1",
+                "group": "Processor / Chipset",
+                "name": "CPU Qty",
+                "description": "CPU Qty"
+            }
+        },
+        {
+            "id": "2501",
+            "type": "product_property",
+            "attributes": {
+                "value": "1",
+                "group": "Processor / Chipset",
+                "name": "Max CPU Qty",
+                "description": "Max CPU Qty"
+            }
+        },
+        {
+            "id": "2502",
+            "type": "product_property",
+            "attributes": {
+                "value": "Upgradable",
+                "group": "Processor / Chipset",
+                "name": "CPU Upgradability",
+                "description": "CPU Upgradability"
+            }
+        },
+        {
+            "id": "2503",
+            "type": "product_property",
+            "attributes": {
+                "value": "Slot 1",
+                "group": "Processor / Chipset",
+                "name": "CPU Socket",
+                "description": "CPU Socket"
+            }
+        },
+        {
+            "id": "2504",
+            "type": "product_property",
+            "attributes": {
+                "value": "Intel 440BX",
+                "group": "Processor / Chipset",
+                "name": "Chipset Type",
+                "description": "Chipset Type"
+            }
+        },
+        {
+            "id": "2505",
+            "type": "product_property",
+            "attributes": {
+                "value": "66 MHz",
+                "group": "Processor / Chipset",
+                "name": "Front Side Bus",
+                "description": "Front Side Bus"
+            }
+        },
+        {
+            "id": "2506",
+            "type": "product_property",
+            "attributes": {
+                "value": "32 MB / 384 MB (max)",
+                "group": "RAM",
+                "name": "Installed Size",
+                "description": "Installed Size"
+            }
+        },
+        {
+            "id": "2507",
+            "type": "product_property",
+            "attributes": {
+                "value": "512 KB",
+                "group": "Cache Memory",
+                "name": "Cache Per Processor",
+                "description": "Cache Per Processor"
+            }
+        },
+        {
+            "id": "2508",
+            "type": "product_property",
+            "attributes": {
+                "value": "SDRAM - non-ECC",
+                "group": "RAM",
+                "name": "Technology",
+                "description": "Technology"
+            }
+        },
+        {
+            "id": "2509",
+            "type": "product_property",
+            "attributes": {
+                "value": "DIMM 168-PIN",
+                "group": "RAM",
+                "name": "Form Factor",
+                "description": "Form Factor"
+            }
+        },
+        {
+            "id": "2510",
+            "type": "product_property",
+            "attributes": {
+                "value": "Max 128 MB module",
+                "group": "RAM",
+                "name": "Upgrade Rule",
+                "description": "Upgrade Rule"
+            }
+        },
+        {
+            "id": "2511",
+            "type": "product_property",
+            "attributes": {
+                "value": "1 x 3.2 GB",
+                "group": "Hard Drive",
+                "name": "Capacity",
+                "description": "Capacity"
+            }
+        },
+        {
+            "id": "2512",
+            "type": "product_property",
+            "attributes": {
+                "value": "AGP",
+                "group": "Graphics Controller",
+                "name": "Interface Type",
+                "description": "Interface Type"
+            }
+        },
+        {
+            "id": "2513",
+            "type": "product_property",
+            "attributes": {
+                "value": "ATA-33",
+                "group": "Storage Controller",
+                "name": "Controller Interface Type",
+                "description": "Controller Interface Type"
+            }
+        },
+        {
+            "id": "2514",
+            "type": "product_property",
+            "attributes": {
+                "value": "None.",
+                "group": "Monitor",
+                "name": "Monitor Type",
+                "description": "Monitor Type"
+            }
+        },
+        {
+            "id": "2515",
+            "type": "product_property",
+            "attributes": {
+                "value": "ATI RAGE PRO",
+                "group": "Graphics Controller",
+                "name": "Graphics Processor",
+                "description": "Graphics Processor"
+            }
+        },
+        {
+            "id": "2516",
+            "type": "product_property",
+            "attributes": {
+                "value": "4 MB / 4 MB (max) SGRAM",
+                "group": "Graphics Controller",
+                "name": "Video Memory",
+                "description": "Video Memory"
+            }
+        },
+        {
+            "id": "2517",
+            "type": "product_property",
+            "attributes": {
+                "value": "VGA (640x480), XGA (1024x768), SVGA (800x600), SXGA (1280x1024)",
+                "group": "Graphics Controller",
+                "name": "Supported Display Graphics",
+                "description": "Supported Display Graphics"
+            }
+        },
+        {
+            "id": "2518",
+            "type": "product_property",
+            "attributes": {
+                "value": "VGA",
+                "group": "Graphics Controller",
+                "name": "Video Interfaces",
+                "description": "Video Interfaces"
+            }
+        },
+        {
+            "id": "2519",
+            "type": "product_property",
+            "attributes": {
+                "value": "3D Sound",
+                "group": "Audio Output",
+                "name": "Sound Output Mode",
+                "description": "Sound Output Mode"
+            }
+        },
+        {
+            "id": "2520",
+            "type": "product_property",
+            "attributes": {
+                "value": "44.1 kHz",
+                "group": "Audio Output",
+                "name": "Max Sampling Rate",
+                "description": "Max Sampling Rate"
+            }
+        },
+        {
+            "id": "2521",
+            "type": "product_property",
+            "attributes": {
+                "value": "EPA Energy Star",
+                "group": "Power",
+                "name": "Compliant Standards",
+                "description": "Compliant Standards"
+            }
+        },
+        {
+            "id": "2522",
+            "type": "product_property",
+            "attributes": {
+                "value": "PCI",
+                "group": "Networking",
+                "name": "Interface (Bus) Type",
+                "description": "Interface (Bus) Type"
+            }
+        },
+        {
+            "id": "2523",
+            "type": "product_property",
+            "attributes": {
+                "value": "Ethernet, Fast Ethernet",
+                "group": "Networking",
+                "name": "Data Link Protocol",
+                "description": "Data Link Protocol"
+            }
+        },
+        {
+            "id": "2524",
+            "type": "product_property",
+            "attributes": {
+                "value": "3 (total) / 2 (free) x external 5.25\" x 1/2H ¦ 1 (total) / 0 (free) x internal 3.5\" x 1/3H",
+                "group": "Expansion / Connectivity",
+                "name": "Bays",
+                "description": "Bays"
+            }
+        },
+        {
+            "id": "2525",
+            "type": "product_property",
+            "attributes": {
+                "value": "2 (total) / 1 (free) x PCI ¦ 2 (total) / 2 (free) x shared PCI / ISA ¦ 1 (total) / 0 (free) x AGP 2x ¦ 1 (total) / 0 (free) x CPU ¦ 3 (total) / 2 (free) x memory - DIMM 168-PIN",
+                "group": "Expansion / Connectivity",
+                "name": "Slots",
+                "description": "Slots"
+            }
+        },
+        {
+            "id": "2526",
+            "type": "product_property",
+            "attributes": {
+                "value": "1 x parallel ¦ 1 x USB ¦ 1 x PS/2 keyboard ¦ 1 x PS/2 mouse ¦ 1 x VGA ¦ 1 x microphone ¦ 1 x headphones ¦ 1 x audio line-in ¦ 1 x LAN ¦ 1 x audio line-out ¦ 2 x serial",
+                "group": "Expansion / Connectivity",
+                "name": "Interfaces",
+                "description": "Interfaces"
+            }
+        },
+        {
+            "id": "2527",
+            "type": "product_property",
+            "attributes": {
+                "value": "Power supply",
+                "group": "Power",
+                "name": "Device Type",
+                "description": "Device Type"
+            }
+        },
+        {
+            "id": "2528",
+            "type": "product_property",
+            "attributes": {
+                "value": "AC 120/230 V (50/60 Hz)",
+                "group": "Power",
+                "name": "Nominal Voltage",
+                "description": "Nominal Voltage"
+            }
+        },
+        {
+            "id": "2529",
+            "type": "product_property",
+            "attributes": {
+                "value": "200 Watt",
+                "group": "Power",
+                "name": "Power Consumption Operational",
+                "description": "Power Consumption Operational"
+            }
+        },
+        {
+            "id": "2530",
+            "type": "product_property",
+            "attributes": {
+                "value": "Microsoft Windows 95",
+                "group": "Operating System / Software",
+                "name": "OS Provided",
+                "description": "OS Provided"
+            }
+        },
+        {
+            "id": "2531",
+            "type": "product_property",
+            "attributes": {
+                "value": "Microsoft Internet Explorer 4.0, Drivers & Utilities",
+                "group": "Operating System / Software",
+                "name": "Software",
+                "description": "Software"
+            }
+        },
+        {
+            "id": "2532",
+            "type": "product_property",
+            "attributes": {
+                "value": "Limited warranty - parts and labour - 1 year - on-site ¦ Limited warranty - parts - 3 years - carry-in",
+                "group": "Manufacturer Warranty",
+                "name": "Service & Support",
+                "description": "Service & Support"
+            }
+        },
+        {
+            "id": "2533",
+            "type": "product_property",
+            "attributes": {
+                "value": "48.7 cm",
+                "group": "Dimensions & Weight",
+                "name": "Width",
+                "description": "Width"
+            }
+        },
+        {
+            "id": "2534",
+            "type": "product_property",
+            "attributes": {
+                "value": "42.7 cm",
+                "group": "Dimensions & Weight",
+                "name": "Depth",
+                "description": "Depth"
+            }
+        },
+        {
+            "id": "2535",
+            "type": "product_property",
+            "attributes": {
+                "value": "14.9 cm",
+                "group": "Dimensions & Weight",
+                "name": "Height",
+                "description": "Height"
+            }
+        },
+        {
+            "id": "2536",
+            "type": "product_property",
+            "attributes": {
+                "value": "10 °C",
+                "group": "Environmental Parameters",
+                "name": "Min Operating Temperature",
+                "description": "Min Operating Temperature"
+            }
+        },
+        {
+            "id": "2537",
+            "type": "product_property",
+            "attributes": {
+                "value": "35 °C",
+                "group": "Environmental Parameters",
+                "name": "Max Operating Temperature",
+                "description": "Max Operating Temperature"
+            }
+        },
+        {
+            "id": "2538",
+            "type": "product_property",
+            "attributes": {
+                "value": "10 - 90%",
+                "group": "Environmental Parameters",
+                "name": "Humidity Range Operating",
+                "description": "Humidity Range Operating"
+            }
+        },
+        {
+            "id": "82581",
+            "type": "image",
+            "attributes": {
+                "viewable_type": "Spree::Variant",
+                "viewable_id": 81,
+                "styles": [
+                    {
+                        "url": "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNVpDQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--5242582c1fe94779845d1ca08fa3ce0e376fcf95/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDam9NWjNKaGRtbDBlVWtpQzJObGJuUmxjZ1k2QmtWVU9ndHlaWE5wZW1WSklnczBPSGcwT0Q0R093WlVPZ3RsZUhSbGJuUkFCem9QWW1GamEyZHliM1Z1WkVraUNuTnViM2N5QmpzR1ZEb01jWFZoYkdsMGVXbFYiLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--acb6d2dbbf9db2378d1c25fe4265c47e2c0d0460/DF7667A3-7F90-423F-B037-F54C5AA9CD5B",
+                        "width": "48",
+                        "height": "48"
+                    },
+                    {
+                        "url": "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNVpDQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--5242582c1fe94779845d1ca08fa3ce0e376fcf95/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDam9NWjNKaGRtbDBlVWtpQzJObGJuUmxjZ1k2QmtWVU9ndHlaWE5wZW1WSklnMHhNREI0TVRBd1BnWTdCbFE2QzJWNGRHVnVkRUFIT2c5aVlXTnJaM0p2ZFc1a1NTSUtjMjV2ZHpJR093WlVPZ3h4ZFdGc2FYUjVhVlU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--19589ae1b000871611dcf4a707165daacb180381/DF7667A3-7F90-423F-B037-F54C5AA9CD5B",
+                        "width": "100",
+                        "height": "100"
+                    },
+                    {
+                        "url": "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNVpDQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--5242582c1fe94779845d1ca08fa3ce0e376fcf95/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDam9NWjNKaGRtbDBlVWtpQzJObGJuUmxjZ1k2QmtWVU9ndHlaWE5wZW1WSklnMHlOREI0TWpRd1BnWTdCbFE2QzJWNGRHVnVkRUFIT2c5aVlXTnJaM0p2ZFc1a1NTSUtjMjV2ZHpJR093WlVPZ3h4ZFdGc2FYUjVhVlU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--030b097e8a659064c3c1e68a58cde69a89f4256f/DF7667A3-7F90-423F-B037-F54C5AA9CD5B",
+                        "width": "240",
+                        "height": "240"
+                    },
+                    {
+                        "url": "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNVpDQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--5242582c1fe94779845d1ca08fa3ce0e376fcf95/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDam9NWjNKaGRtbDBlVWtpQzJObGJuUmxjZ1k2QmtWVU9ndHlaWE5wZW1WSklnMHhOakI0TWpBd1BnWTdCbFE2QzJWNGRHVnVkRUFIT2c5aVlXTnJaM0p2ZFc1a1NTSUtjMjV2ZHpJR093WlVPZ3h4ZFdGc2FYUjVhVlU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--480a7b01d3c2969f37553d9dc62b76f786b88228/DF7667A3-7F90-423F-B037-F54C5AA9CD5B",
+                        "width": "160",
+                        "height": "200"
+                    },
+                    {
+                        "url": "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNVpDQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--5242582c1fe94779845d1ca08fa3ce0e376fcf95/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDam9NWjNKaGRtbDBlVWtpQzJObGJuUmxjZ1k2QmtWVU9ndHlaWE5wZW1WSklnMDBORGg0TmpBd1BnWTdCbFE2QzJWNGRHVnVkRUFIT2c5aVlXTnJaM0p2ZFc1a1NTSUtjMjV2ZHpJR093WlVPZ3h4ZFdGc2FYUjVhVlU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--6140d071d998b54f19e6791e9e80ed89951e8415/DF7667A3-7F90-423F-B037-F54C5AA9CD5B",
+                        "width": "448",
+                        "height": "600"
+                    },
+                    {
+                        "url": "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNVpDQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--5242582c1fe94779845d1ca08fa3ce0e376fcf95/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDam9NWjNKaGRtbDBlVWtpQzJObGJuUmxjZ1k2QmtWVU9ndHlaWE5wZW1WSklnMHlOVFI0TXpRd1BnWTdCbFE2QzJWNGRHVnVkRUFIT2c5aVlXTnJaM0p2ZFc1a1NTSUtjMjV2ZHpJR093WlVPZ3h4ZFdGc2FYUjVhVlU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--38ec767f5856048fe1a36bbf3e42ade40e29a76f/DF7667A3-7F90-423F-B037-F54C5AA9CD5B",
+                        "width": "254",
+                        "height": "340"
+                    },
+                    {
+                        "url": "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNVpDQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--5242582c1fe94779845d1ca08fa3ce0e376fcf95/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDam9NWjNKaGRtbDBlVWtpQzJObGJuUmxjZ1k2QmtWVU9ndHlaWE5wZW1WSklnMHpOVEI0TkRZNFBnWTdCbFE2QzJWNGRHVnVkRUFIT2c5aVlXTnJaM0p2ZFc1a1NTSUtjMjV2ZHpJR093WlVPZ3h4ZFdGc2FYUjVhVlU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--1283f7c7c63f600099f961866fb4678dc9528a73/DF7667A3-7F90-423F-B037-F54C5AA9CD5B",
+                        "width": "350",
+                        "height": "468"
+                    },
+                    {
+                        "url": "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNVpDQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--5242582c1fe94779845d1ca08fa3ce0e376fcf95/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDam9NWjNKaGRtbDBlVWtpQzJObGJuUmxjZ1k2QmtWVU9ndHlaWE5wZW1WSklnMHlNako0TWprM1BnWTdCbFE2QzJWNGRHVnVkRUFIT2c5aVlXTnJaM0p2ZFc1a1NTSUtjMjV2ZHpJR093WlVPZ3h4ZFdGc2FYUjVhVlU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--683c0de93d0b09351b71108a17af9a801f1648a8/DF7667A3-7F90-423F-B037-F54C5AA9CD5B",
+                        "width": "222",
+                        "height": "297"
+                    },
+                    {
+                        "url": "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNVpDQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--5242582c1fe94779845d1ca08fa3ce0e376fcf95/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDam9NWjNKaGRtbDBlVWtpQzJObGJuUmxjZ1k2QmtWVU9ndHlaWE5wZW1WSklnMHlOemg0TXpjeFBnWTdCbFE2QzJWNGRHVnVkRUFIT2c5aVlXTnJaM0p2ZFc1a1NTSUtjMjV2ZHpJR093WlVPZ3h4ZFdGc2FYUjVhVlU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--4ee4b0ce34474b228333befcec8fdc2d84bcbc90/DF7667A3-7F90-423F-B037-F54C5AA9CD5B",
+                        "width": "278",
+                        "height": "371"
+                    },
+                    {
+                        "url": "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNVpDQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--5242582c1fe94779845d1ca08fa3ce0e376fcf95/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDam9NWjNKaGRtbDBlVWtpQzJObGJuUmxjZ1k2QmtWVU9ndHlaWE5wZW1WSklnMDJNREI0TmpBd1BnWTdCbFE2QzJWNGRHVnVkRUFIT2c5aVlXTnJaM0p2ZFc1a1NTSUtjMjV2ZHpJR093WlVPZ3h4ZFdGc2FYUjVhVlU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--d499ee0cc1cc4c210316db3f0206ab3d8e3b6043/DF7667A3-7F90-423F-B037-F54C5AA9CD5B",
+                        "width": "600",
+                        "height": "600"
+                    },
+                    {
+                        "url": "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNVpDQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--5242582c1fe94779845d1ca08fa3ce0e376fcf95/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDam9NWjNKaGRtbDBlVWtpQzJObGJuUmxjZ1k2QmtWVU9ndHlaWE5wZW1WSklnMDFNREI0TkRBd1BnWTdCbFE2QzJWNGRHVnVkRUFIT2c5aVlXTnJaM0p2ZFc1a1NTSUtjMjV2ZHpJR093WlVPZ3h4ZFdGc2FYUjVhVlU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--1173c762f646e8ce3de4ba4cec32cf6f317de08b/DF7667A3-7F90-423F-B037-F54C5AA9CD5B",
+                        "width": "500",
+                        "height": "400"
+                    },
+                    {
+                        "url": "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNVpDQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--5242582c1fe94779845d1ca08fa3ce0e376fcf95/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDam9NWjNKaGRtbDBlVWtpQzJObGJuUmxjZ1k2QmtWVU9ndHlaWE5wZW1WSklnMHlOemg0TXpjeFBnWTdCbFE2QzJWNGRHVnVkRUFIT2c5aVlXTnJaM0p2ZFc1a1NTSUtjMjV2ZHpJR093WlVPZ3h4ZFdGc2FYUjVhVlU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--4ee4b0ce34474b228333befcec8fdc2d84bcbc90/DF7667A3-7F90-423F-B037-F54C5AA9CD5B",
+                        "width": "278",
+                        "height": "371"
+                    },
+                    {
+                        "url": "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNVpDQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--5242582c1fe94779845d1ca08fa3ce0e376fcf95/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDam9NWjNKaGRtbDBlVWtpQzJObGJuUmxjZ1k2QmtWVU9ndHlaWE5wZW1WSklnMDJOVEI0T0Rjd1BnWTdCbFE2QzJWNGRHVnVkRUFIT2c5aVlXTnJaM0p2ZFc1a1NTSUtjMjV2ZHpJR093WlVPZ3h4ZFdGc2FYUjVhVlU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--d4bb338d2c0e6d137fd83254b6e7839de6acddaa/DF7667A3-7F90-423F-B037-F54C5AA9CD5B",
+                        "width": "650",
+                        "height": "870"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "83887",
+            "type": "image",
+            "attributes": {
+                "viewable_type": "Spree::Variant",
+                "viewable_id": 81,
+                "styles": [
+                    {
+                        "url": "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBN0JIQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e8061c20987fd66462d2366cd43a986af73263e0/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDam9NWjNKaGRtbDBlVWtpQzJObGJuUmxjZ1k2QmtWVU9ndHlaWE5wZW1WSklnczBPSGcwT0Q0R093WlVPZ3RsZUhSbGJuUkFCem9QWW1GamEyZHliM1Z1WkVraUNuTnViM2N5QmpzR1ZEb01jWFZoYkdsMGVXbFYiLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--acb6d2dbbf9db2378d1c25fe4265c47e2c0d0460/246FD6A3-7623-477D-9522-F9764757C5AE",
+                        "width": "48",
+                        "height": "48"
+                    },
+                    {
+                        "url": "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBN0JIQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e8061c20987fd66462d2366cd43a986af73263e0/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDam9NWjNKaGRtbDBlVWtpQzJObGJuUmxjZ1k2QmtWVU9ndHlaWE5wZW1WSklnMHhNREI0TVRBd1BnWTdCbFE2QzJWNGRHVnVkRUFIT2c5aVlXTnJaM0p2ZFc1a1NTSUtjMjV2ZHpJR093WlVPZ3h4ZFdGc2FYUjVhVlU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--19589ae1b000871611dcf4a707165daacb180381/246FD6A3-7623-477D-9522-F9764757C5AE",
+                        "width": "100",
+                        "height": "100"
+                    },
+                    {
+                        "url": "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBN0JIQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e8061c20987fd66462d2366cd43a986af73263e0/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDam9NWjNKaGRtbDBlVWtpQzJObGJuUmxjZ1k2QmtWVU9ndHlaWE5wZW1WSklnMHlOREI0TWpRd1BnWTdCbFE2QzJWNGRHVnVkRUFIT2c5aVlXTnJaM0p2ZFc1a1NTSUtjMjV2ZHpJR093WlVPZ3h4ZFdGc2FYUjVhVlU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--030b097e8a659064c3c1e68a58cde69a89f4256f/246FD6A3-7623-477D-9522-F9764757C5AE",
+                        "width": "240",
+                        "height": "240"
+                    },
+                    {
+                        "url": "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBN0JIQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e8061c20987fd66462d2366cd43a986af73263e0/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDam9NWjNKaGRtbDBlVWtpQzJObGJuUmxjZ1k2QmtWVU9ndHlaWE5wZW1WSklnMHhOakI0TWpBd1BnWTdCbFE2QzJWNGRHVnVkRUFIT2c5aVlXTnJaM0p2ZFc1a1NTSUtjMjV2ZHpJR093WlVPZ3h4ZFdGc2FYUjVhVlU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--480a7b01d3c2969f37553d9dc62b76f786b88228/246FD6A3-7623-477D-9522-F9764757C5AE",
+                        "width": "160",
+                        "height": "200"
+                    },
+                    {
+                        "url": "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBN0JIQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e8061c20987fd66462d2366cd43a986af73263e0/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDam9NWjNKaGRtbDBlVWtpQzJObGJuUmxjZ1k2QmtWVU9ndHlaWE5wZW1WSklnMDBORGg0TmpBd1BnWTdCbFE2QzJWNGRHVnVkRUFIT2c5aVlXTnJaM0p2ZFc1a1NTSUtjMjV2ZHpJR093WlVPZ3h4ZFdGc2FYUjVhVlU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--6140d071d998b54f19e6791e9e80ed89951e8415/246FD6A3-7623-477D-9522-F9764757C5AE",
+                        "width": "448",
+                        "height": "600"
+                    },
+                    {
+                        "url": "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBN0JIQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e8061c20987fd66462d2366cd43a986af73263e0/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDam9NWjNKaGRtbDBlVWtpQzJObGJuUmxjZ1k2QmtWVU9ndHlaWE5wZW1WSklnMHlOVFI0TXpRd1BnWTdCbFE2QzJWNGRHVnVkRUFIT2c5aVlXTnJaM0p2ZFc1a1NTSUtjMjV2ZHpJR093WlVPZ3h4ZFdGc2FYUjVhVlU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--38ec767f5856048fe1a36bbf3e42ade40e29a76f/246FD6A3-7623-477D-9522-F9764757C5AE",
+                        "width": "254",
+                        "height": "340"
+                    },
+                    {
+                        "url": "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBN0JIQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e8061c20987fd66462d2366cd43a986af73263e0/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDam9NWjNKaGRtbDBlVWtpQzJObGJuUmxjZ1k2QmtWVU9ndHlaWE5wZW1WSklnMHpOVEI0TkRZNFBnWTdCbFE2QzJWNGRHVnVkRUFIT2c5aVlXTnJaM0p2ZFc1a1NTSUtjMjV2ZHpJR093WlVPZ3h4ZFdGc2FYUjVhVlU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--1283f7c7c63f600099f961866fb4678dc9528a73/246FD6A3-7623-477D-9522-F9764757C5AE",
+                        "width": "350",
+                        "height": "468"
+                    },
+                    {
+                        "url": "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBN0JIQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e8061c20987fd66462d2366cd43a986af73263e0/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDam9NWjNKaGRtbDBlVWtpQzJObGJuUmxjZ1k2QmtWVU9ndHlaWE5wZW1WSklnMHlNako0TWprM1BnWTdCbFE2QzJWNGRHVnVkRUFIT2c5aVlXTnJaM0p2ZFc1a1NTSUtjMjV2ZHpJR093WlVPZ3h4ZFdGc2FYUjVhVlU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--683c0de93d0b09351b71108a17af9a801f1648a8/246FD6A3-7623-477D-9522-F9764757C5AE",
+                        "width": "222",
+                        "height": "297"
+                    },
+                    {
+                        "url": "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBN0JIQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e8061c20987fd66462d2366cd43a986af73263e0/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDam9NWjNKaGRtbDBlVWtpQzJObGJuUmxjZ1k2QmtWVU9ndHlaWE5wZW1WSklnMHlOemg0TXpjeFBnWTdCbFE2QzJWNGRHVnVkRUFIT2c5aVlXTnJaM0p2ZFc1a1NTSUtjMjV2ZHpJR093WlVPZ3h4ZFdGc2FYUjVhVlU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--4ee4b0ce34474b228333befcec8fdc2d84bcbc90/246FD6A3-7623-477D-9522-F9764757C5AE",
+                        "width": "278",
+                        "height": "371"
+                    },
+                    {
+                        "url": "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBN0JIQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e8061c20987fd66462d2366cd43a986af73263e0/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDam9NWjNKaGRtbDBlVWtpQzJObGJuUmxjZ1k2QmtWVU9ndHlaWE5wZW1WSklnMDJNREI0TmpBd1BnWTdCbFE2QzJWNGRHVnVkRUFIT2c5aVlXTnJaM0p2ZFc1a1NTSUtjMjV2ZHpJR093WlVPZ3h4ZFdGc2FYUjVhVlU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--d499ee0cc1cc4c210316db3f0206ab3d8e3b6043/246FD6A3-7623-477D-9522-F9764757C5AE",
+                        "width": "600",
+                        "height": "600"
+                    },
+                    {
+                        "url": "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBN0JIQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e8061c20987fd66462d2366cd43a986af73263e0/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDam9NWjNKaGRtbDBlVWtpQzJObGJuUmxjZ1k2QmtWVU9ndHlaWE5wZW1WSklnMDFNREI0TkRBd1BnWTdCbFE2QzJWNGRHVnVkRUFIT2c5aVlXTnJaM0p2ZFc1a1NTSUtjMjV2ZHpJR093WlVPZ3h4ZFdGc2FYUjVhVlU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--1173c762f646e8ce3de4ba4cec32cf6f317de08b/246FD6A3-7623-477D-9522-F9764757C5AE",
+                        "width": "500",
+                        "height": "400"
+                    },
+                    {
+                        "url": "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBN0JIQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e8061c20987fd66462d2366cd43a986af73263e0/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDam9NWjNKaGRtbDBlVWtpQzJObGJuUmxjZ1k2QmtWVU9ndHlaWE5wZW1WSklnMHlOemg0TXpjeFBnWTdCbFE2QzJWNGRHVnVkRUFIT2c5aVlXTnJaM0p2ZFc1a1NTSUtjMjV2ZHpJR093WlVPZ3h4ZFdGc2FYUjVhVlU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--4ee4b0ce34474b228333befcec8fdc2d84bcbc90/246FD6A3-7623-477D-9522-F9764757C5AE",
+                        "width": "278",
+                        "height": "371"
+                    },
+                    {
+                        "url": "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBN0JIQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e8061c20987fd66462d2366cd43a986af73263e0/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDam9NWjNKaGRtbDBlVWtpQzJObGJuUmxjZ1k2QmtWVU9ndHlaWE5wZW1WSklnMDJOVEI0T0Rjd1BnWTdCbFE2QzJWNGRHVnVkRUFIT2c5aVlXTnJaM0p2ZFc1a1NTSUtjMjV2ZHpJR093WlVPZ3h4ZFdGc2FYUjVhVlU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--d4bb338d2c0e6d137fd83254b6e7839de6acddaa/246FD6A3-7623-477D-9522-F9764757C5AE",
+                        "width": "650",
+                        "height": "870"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "15",
+            "type": "manufacturer",
+            "attributes": {
+                "name": "Compaq"
+            }
+        }
+    ]
+}

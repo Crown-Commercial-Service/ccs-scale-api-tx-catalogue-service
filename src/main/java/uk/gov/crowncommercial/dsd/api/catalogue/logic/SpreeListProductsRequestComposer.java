@@ -1,44 +1,45 @@
 package uk.gov.crowncommercial.dsd.api.catalogue.logic;
 
-import static java.lang.String.format;
-import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
-import java.util.StringJoiner;
 import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.context.properties.ConstructorBinding;
+import org.springframework.web.util.UriComponentsBuilder;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Prepare the List Products request to Spree, mostly just translating accepted incoming query
  * parameters.
  */
-@Component
+@ConfigurationProperties("spree.api.query-params.list-products")
+@ConstructorBinding
+@RequiredArgsConstructor
+@Slf4j
 public class SpreeListProductsRequestComposer implements Processor {
 
-  private static final String FILTER_PARAM_TEMPLATE = "filter[%s]";
-
-  @Value("${spree.api.pass-through-params.list-products.filter}")
-  private String[] passThroughFilterParams;
-
-  @Value("${spree.api.pass-through-params.list-products.other}")
-  private String[] passThroughOtherParams;
+  private final List<String> passThrough;
+  private final Map<String, String> mapped;
+  private final Map<String, String> fixed;
 
   @Override
   public void process(final Exchange exchange) throws Exception {
     final Map<String, Object> headers = exchange.getIn().getHeaders();
-    final StringJoiner queryParams = new StringJoiner("&");
+    final UriComponentsBuilder uriBuilder = UriComponentsBuilder.newInstance();
 
-    Arrays.stream(passThroughFilterParams).map(s -> format(FILTER_PARAM_TEMPLATE, s))
-        .filter(headers::containsKey).forEach(p -> queryParams.add(p + "=" + headers.get(p)));
+    passThrough.stream().filter(headers::containsKey)
+        .forEach(p -> uriBuilder.queryParam(p, headers.get(p)));
 
-    Arrays.stream(passThroughOtherParams).filter(headers::containsKey)
-        .forEach(p -> queryParams.add(p + "=" + headers.get(p)));
+    mapped.entrySet().stream().filter(es -> headers.containsKey(es.getKey()))
+        .forEach(es -> uriBuilder.queryParam(es.getValue(), headers.get(es.getKey())));
 
-    // Ensure we retrieve image links
-    queryParams.add("include=image");
+    fixed.entrySet().stream().forEach(es -> uriBuilder.queryParam(es.getKey(), es.getValue()));
 
-    exchange.getIn().setHeader(Exchange.HTTP_QUERY, queryParams.toString());
+    final String queryString = uriBuilder.build().getQuery();
+    log.debug("Spree List Products query string: {}", queryString);
+    exchange.getIn().setHeader(Exchange.HTTP_QUERY, queryString);
   }
 
 }

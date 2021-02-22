@@ -24,13 +24,13 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-configuration-processor</artifactId>
 			<optional>true</optional>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.apache.camel.springboot</groupId>
 			<artifactId>camel-spring-boot-starter</artifactId>
@@ -138,6 +138,18 @@
 			<artifactId>hamcrest</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- <dependency> <groupId>com.github.tomakehurst</groupId> <artifactId>wiremock-jre8</artifactId> 
+			<version>2.27.2</version> <scope>test</scope> </dependency> -->
+
+		<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-contract-wiremock -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-contract-wiremock</artifactId>
+			<version>3.0.1</version>
+			<scope>test</scope>
+		</dependency>
+
 
 	</dependencies>
 

@@ -29,6 +29,9 @@ public class SpreeListProductsRequestComposer implements Processor {
     final Map<String, Object> headers = exchange.getIn().getHeaders();
     final UriComponentsBuilder uriBuilder = UriComponentsBuilder.newInstance();
 
+    log.info("Incoming headers: " + headers);
+    log.info("mapped: " + mapped);
+
     passThrough.stream().filter(headers::containsKey)
         .forEach(p -> uriBuilder.queryParam(p, headers.get(p)));
 
@@ -38,7 +41,7 @@ public class SpreeListProductsRequestComposer implements Processor {
     fixed.entrySet().stream().forEach(es -> uriBuilder.queryParam(es.getKey(), es.getValue()));
 
     final String queryString = uriBuilder.build().getQuery();
-    log.debug("Spree List Products query string: {}", queryString);
+    log.info("Spree List Products query string: {}", queryString);
     exchange.getIn().setHeader(Exchange.HTTP_QUERY, queryString);
   }
 

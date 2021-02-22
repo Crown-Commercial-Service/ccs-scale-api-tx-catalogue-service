@@ -1,1 +1,5 @@
-SPREE_API_HOST: http://dummy.example.com
+SPREE_API_HOST: http://localhost:${wiremock.server.port}
+
+#camel:
+#  springboot:
+#    auto-startup: false

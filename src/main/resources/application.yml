@@ -62,7 +62,8 @@ spree:
           - page
           - per_page
         mapped:
-          filter[categories]: filter[taxons]
+          # Escape the [] chars.. with []
+          '[filter[categories]]': filter[taxons]
         fixed:
           include: image
     

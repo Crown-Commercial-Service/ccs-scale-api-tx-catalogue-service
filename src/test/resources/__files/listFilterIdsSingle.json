@@ -1,0 +1,259 @@
+{
+    "data": [
+        {
+            "id": "73",
+            "type": "product",
+            "attributes": {
+                "name": "Compaq Deskpro 6266X Model 3200 - Super Interwebs",
+                "description": "Has floppy disk drive. Does internet.",
+                "active": false,
+                "created_at": "2020-10-12T15:26:42.703+01:00",
+                "updated_at": "2021-02-05T13:44:25.406+00:00",
+                "currency": "GBP",
+                "available": true,
+                "total_on_hand": 50,
+                "in_stock": true,
+                "purchasable": true,
+                "backorderable": false,
+                "key_selling_points": null,
+                "unspsc": null,
+                "manufacturer": "Compaq",
+                "cnet_id": "S0000097",
+                "slug": "3bd11ad7-9f49-4ca2-af55-d1a7174fecc6",
+                "mpn_number": "178902-054",
+                "available_on": "2021-02-05T00:00:00.000+00:00",
+                "image_id": "82581",
+                "default_variant_id": "209225",
+                "price": "39.52",
+                "delivery_included_price": "41.52",
+                "display_price": "£39.52",
+                "display_delivery_included_price": "£41.52"
+            },
+            "relationships": {
+                "image": {
+                    "data": null
+                }
+            }
+        }
+    ],
+    "included": [
+        {
+            "id": "82581",
+            "type": "image",
+            "attributes": {
+                "viewable_type": "Spree::Variant",
+                "viewable_id": 81,
+                "styles": [
+                    {
+                        "url": "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNVpDQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--5242582c1fe94779845d1ca08fa3ce0e376fcf95/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDam9NWjNKaGRtbDBlVWtpQzJObGJuUmxjZ1k2QmtWVU9ndHlaWE5wZW1WSklnczBPSGcwT0Q0R093WlVPZ3RsZUhSbGJuUkFCem9QWW1GamEyZHliM1Z1WkVraUNuTnViM2N5QmpzR1ZEb01jWFZoYkdsMGVXbFYiLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--acb6d2dbbf9db2378d1c25fe4265c47e2c0d0460/DF7667A3-7F90-423F-B037-F54C5AA9CD5B",
+                        "width": "48",
+                        "height": "48"
+                    },
+                    {
+                        "url": "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNVpDQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--5242582c1fe94779845d1ca08fa3ce0e376fcf95/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDam9NWjNKaGRtbDBlVWtpQzJObGJuUmxjZ1k2QmtWVU9ndHlaWE5wZW1WSklnMHhNREI0TVRBd1BnWTdCbFE2QzJWNGRHVnVkRUFIT2c5aVlXTnJaM0p2ZFc1a1NTSUtjMjV2ZHpJR093WlVPZ3h4ZFdGc2FYUjVhVlU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--19589ae1b000871611dcf4a707165daacb180381/DF7667A3-7F90-423F-B037-F54C5AA9CD5B",
+                        "width": "100",
+                        "height": "100"
+                    },
+                    {
+                        "url": "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNVpDQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--5242582c1fe94779845d1ca08fa3ce0e376fcf95/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDam9NWjNKaGRtbDBlVWtpQzJObGJuUmxjZ1k2QmtWVU9ndHlaWE5wZW1WSklnMHlOREI0TWpRd1BnWTdCbFE2QzJWNGRHVnVkRUFIT2c5aVlXTnJaM0p2ZFc1a1NTSUtjMjV2ZHpJR093WlVPZ3h4ZFdGc2FYUjVhVlU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--030b097e8a659064c3c1e68a58cde69a89f4256f/DF7667A3-7F90-423F-B037-F54C5AA9CD5B",
+                        "width": "240",
+                        "height": "240"
+                    },
+                    {
+                        "url": "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNVpDQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--5242582c1fe94779845d1ca08fa3ce0e376fcf95/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDam9NWjNKaGRtbDBlVWtpQzJObGJuUmxjZ1k2QmtWVU9ndHlaWE5wZW1WSklnMHhOakI0TWpBd1BnWTdCbFE2QzJWNGRHVnVkRUFIT2c5aVlXTnJaM0p2ZFc1a1NTSUtjMjV2ZHpJR093WlVPZ3h4ZFdGc2FYUjVhVlU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--480a7b01d3c2969f37553d9dc62b76f786b88228/DF7667A3-7F90-423F-B037-F54C5AA9CD5B",
+                        "width": "160",
+                        "height": "200"
+                    },
+                    {
+                        "url": "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNVpDQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--5242582c1fe94779845d1ca08fa3ce0e376fcf95/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDam9NWjNKaGRtbDBlVWtpQzJObGJuUmxjZ1k2QmtWVU9ndHlaWE5wZW1WSklnMDBORGg0TmpBd1BnWTdCbFE2QzJWNGRHVnVkRUFIT2c5aVlXTnJaM0p2ZFc1a1NTSUtjMjV2ZHpJR093WlVPZ3h4ZFdGc2FYUjVhVlU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--6140d071d998b54f19e6791e9e80ed89951e8415/DF7667A3-7F90-423F-B037-F54C5AA9CD5B",
+                        "width": "448",
+                        "height": "600"
+                    },
+                    {
+                        "url": "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNVpDQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--5242582c1fe94779845d1ca08fa3ce0e376fcf95/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDam9NWjNKaGRtbDBlVWtpQzJObGJuUmxjZ1k2QmtWVU9ndHlaWE5wZW1WSklnMHlOVFI0TXpRd1BnWTdCbFE2QzJWNGRHVnVkRUFIT2c5aVlXTnJaM0p2ZFc1a1NTSUtjMjV2ZHpJR093WlVPZ3h4ZFdGc2FYUjVhVlU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--38ec767f5856048fe1a36bbf3e42ade40e29a76f/DF7667A3-7F90-423F-B037-F54C5AA9CD5B",
+                        "width": "254",
+                        "height": "340"
+                    },
+                    {
+                        "url": "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNVpDQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--5242582c1fe94779845d1ca08fa3ce0e376fcf95/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDam9NWjNKaGRtbDBlVWtpQzJObGJuUmxjZ1k2QmtWVU9ndHlaWE5wZW1WSklnMHpOVEI0TkRZNFBnWTdCbFE2QzJWNGRHVnVkRUFIT2c5aVlXTnJaM0p2ZFc1a1NTSUtjMjV2ZHpJR093WlVPZ3h4ZFdGc2FYUjVhVlU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--1283f7c7c63f600099f961866fb4678dc9528a73/DF7667A3-7F90-423F-B037-F54C5AA9CD5B",
+                        "width": "350",
+                        "height": "468"
+                    },
+                    {
+                        "url": "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNVpDQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--5242582c1fe94779845d1ca08fa3ce0e376fcf95/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDam9NWjNKaGRtbDBlVWtpQzJObGJuUmxjZ1k2QmtWVU9ndHlaWE5wZW1WSklnMHlNako0TWprM1BnWTdCbFE2QzJWNGRHVnVkRUFIT2c5aVlXTnJaM0p2ZFc1a1NTSUtjMjV2ZHpJR093WlVPZ3h4ZFdGc2FYUjVhVlU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--683c0de93d0b09351b71108a17af9a801f1648a8/DF7667A3-7F90-423F-B037-F54C5AA9CD5B",
+                        "width": "222",
+                        "height": "297"
+                    },
+                    {
+                        "url": "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNVpDQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--5242582c1fe94779845d1ca08fa3ce0e376fcf95/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDam9NWjNKaGRtbDBlVWtpQzJObGJuUmxjZ1k2QmtWVU9ndHlaWE5wZW1WSklnMHlOemg0TXpjeFBnWTdCbFE2QzJWNGRHVnVkRUFIT2c5aVlXTnJaM0p2ZFc1a1NTSUtjMjV2ZHpJR093WlVPZ3h4ZFdGc2FYUjVhVlU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--4ee4b0ce34474b228333befcec8fdc2d84bcbc90/DF7667A3-7F90-423F-B037-F54C5AA9CD5B",
+                        "width": "278",
+                        "height": "371"
+                    },
+                    {
+                        "url": "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNVpDQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--5242582c1fe94779845d1ca08fa3ce0e376fcf95/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDam9NWjNKaGRtbDBlVWtpQzJObGJuUmxjZ1k2QmtWVU9ndHlaWE5wZW1WSklnMDJNREI0TmpBd1BnWTdCbFE2QzJWNGRHVnVkRUFIT2c5aVlXTnJaM0p2ZFc1a1NTSUtjMjV2ZHpJR093WlVPZ3h4ZFdGc2FYUjVhVlU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--d499ee0cc1cc4c210316db3f0206ab3d8e3b6043/DF7667A3-7F90-423F-B037-F54C5AA9CD5B",
+                        "width": "600",
+                        "height": "600"
+                    },
+                    {
+                        "url": "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNVpDQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--5242582c1fe94779845d1ca08fa3ce0e376fcf95/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDam9NWjNKaGRtbDBlVWtpQzJObGJuUmxjZ1k2QmtWVU9ndHlaWE5wZW1WSklnMDFNREI0TkRBd1BnWTdCbFE2QzJWNGRHVnVkRUFIT2c5aVlXTnJaM0p2ZFc1a1NTSUtjMjV2ZHpJR093WlVPZ3h4ZFdGc2FYUjVhVlU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--1173c762f646e8ce3de4ba4cec32cf6f317de08b/DF7667A3-7F90-423F-B037-F54C5AA9CD5B",
+                        "width": "500",
+                        "height": "400"
+                    },
+                    {
+                        "url": "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNVpDQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--5242582c1fe94779845d1ca08fa3ce0e376fcf95/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDam9NWjNKaGRtbDBlVWtpQzJObGJuUmxjZ1k2QmtWVU9ndHlaWE5wZW1WSklnMHlOemg0TXpjeFBnWTdCbFE2QzJWNGRHVnVkRUFIT2c5aVlXTnJaM0p2ZFc1a1NTSUtjMjV2ZHpJR093WlVPZ3h4ZFdGc2FYUjVhVlU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--4ee4b0ce34474b228333befcec8fdc2d84bcbc90/DF7667A3-7F90-423F-B037-F54C5AA9CD5B",
+                        "width": "278",
+                        "height": "371"
+                    },
+                    {
+                        "url": "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNVpDQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--5242582c1fe94779845d1ca08fa3ce0e376fcf95/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDam9NWjNKaGRtbDBlVWtpQzJObGJuUmxjZ1k2QmtWVU9ndHlaWE5wZW1WSklnMDJOVEI0T0Rjd1BnWTdCbFE2QzJWNGRHVnVkRUFIT2c5aVlXTnJaM0p2ZFc1a1NTSUtjMjV2ZHpJR093WlVPZ3h4ZFdGc2FYUjVhVlU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--d4bb338d2c0e6d137fd83254b6e7839de6acddaa/DF7667A3-7F90-423F-B037-F54C5AA9CD5B",
+                        "width": "650",
+                        "height": "870"
+                    }
+                ]
+            }
+        }
+    ],
+    "meta": {
+        "count": 1,
+        "total_count": 1,
+        "total_pages": 1,
+        "filters": {
+            "taxons": [
+                {
+                    "id": 2,
+                    "name": "Hardware",
+                    "taxonomy_id": 1,
+                    "parent_id": 1,
+                    "count": 2
+                }
+            ],
+            "manufacturers": [
+                {
+                    "id": 15,
+                    "name": "Compaq",
+                    "count": 1
+                }
+            ],
+            "properties": [
+                {
+                    "id": 103,
+                    "name": "Bays",
+                    "count": 1,
+                    "values": [
+                        {
+                            "name": "3 (total) / 2 (free) x external 5.25\" x 1/2H ¦ 1 (total) / 0 (free) x internal 3.5\" x 1/3H",
+                            "count": 1
+                        }
+                    ]
+                },
+                {
+                    "id": 114,
+                    "name": "Built-in Devices",
+                    "count": 1,
+                    "values": [
+                        {
+                            "name": "Speaker",
+                            "count": 1
+                        }
+                    ]
+                },
+                {
+                    "id": 7,
+                    "name": "CPU",
+                    "count": 1,
+                    "values": [
+                        {
+                            "name": "Intel Pentium II 266 MHz",
+                            "count": 1
+                        }
+                    ]
+                },
+                {
+                    "id": 91,
+                    "name": "CPU Qty",
+                    "count": 1,
+                    "values": [
+                        {
+                            "name": "1",
+                            "count": 1
+                        }
+                    ]
+                },
+                {
+                    "id": 94,
+                    "name": "CPU Socket",
+                    "count": 1,
+                    "values": [
+                        {
+                            "name": "Slot 1",
+                            "count": 1
+                        }
+                    ]
+                },
+                {
+                    "id": 93,
+                    "name": "CPU Upgradability",
+                    "count": 1,
+                    "values": [
+                        {
+                            "name": "Upgradable",
+                            "count": 1
+                        }
+                    ]
+                },
+                {
+                    "id": 96,
+                    "name": "Cache Per Processor",
+                    "count": 1,
+                    "values": [
+                        {
+                            "name": "512 KB",
+                            "count": 1
+                        }
+                    ]
+                },
+                {
+                    "id": 98,
+                    "name": "Capacity",
+                    "count": 1,
+                    "values": [
+                        {
+                            "name": "1 x 3.2 GB",
+                            "count": 1
+                        }
+                    ]
+                },
+                {
+                    "id": 115,
+                    "name": "Chipset Type",
+                    "count": 1,
+                    "values": [
+                        {
+                            "name": "Intel 440BX",
+                            "count": 1
+                        }
+                    ]
+                },
+                {
+                    "id": 18,
+                    "name": "Compliant Standards",
+                    "count": 1,
+                    "values": [
+                        {
+                            "name": "EPA Energy Star",
+                            "count": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        "breadcrumbs": null
+    },
+    "links": {
+        "self": "https://dev.marketplace-admin.scale.crowncommercial.gov.uk/api/v2/storefront/products?include=image&filter[ids]=73",
+        "next": "https://dev.marketplace-admin.scale.crowncommercial.gov.uk/api/v2/storefront/products?filter%5Bids%5D=73&include=image&page=1",
+        "prev": "https://dev.marketplace-admin.scale.crowncommercial.gov.uk/api/v2/storefront/products?filter%5Bids%5D=73&include=image&page=1",
+        "last": "https://dev.marketplace-admin.scale.crowncommercial.gov.uk/api/v2/storefront/products?filter%5Bids%5D=73&include=image&page=1",
+        "first": "https://dev.marketplace-admin.scale.crowncommercial.gov.uk/api/v2/storefront/products?filter%5Bids%5D=73&include=image&page=1"
+    }
+}

@@ -1,37 +1,34 @@
 package uk.gov.crowncommercial.dsd.api.catalogue;
 
+import static com.github.tomakehurst.wiremock.client.WireMock.*;
 import static io.restassured.RestAssured.given;
 import static org.apache.http.HttpStatus.SC_OK;
 import static org.hamcrest.CoreMatchers.is;
-import static uk.gov.crowncommercial.dsd.api.catalogue.config.Constants.ENDPOINT_SPREE_API_LIST_PRODUCTS;
-import org.apache.camel.EndpointInject;
-import org.apache.camel.builder.AdviceWith;
-import org.apache.camel.component.mock.MockEndpoint;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import java.util.concurrent.TimeUnit;
+import org.apache.camel.builder.NotifyBuilder;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
 import io.restassured.http.ContentType;
-import lombok.extern.slf4j.Slf4j;
-import uk.gov.crowncommercial.dsd.api.catalogue.config.Constants;
 
-@Slf4j
 class ListProductsApiTest extends AbstractApiTest {
 
   @Value("${api.paths.list-products}")
-  private String apiListProducts;
+  private String apiPathListProducts;
 
-  @EndpointInject("mock:" + ENDPOINT_SPREE_API_LIST_PRODUCTS)
-  protected MockEndpoint mockEndpointSpreeListProducts;
+  @Value("${spree.api.paths.list-products}")
+  private String spreeApiPathListProducts;
 
   @Test
   void listFilterIdsSingle() throws Exception {
 
-    log.info("mockEndpointSpreeListProducts" + mockEndpointSpreeListProducts);
+    stubFor(get(urlPathEqualTo(spreeApiBasePath + spreeApiPathListProducts)).willReturn(aResponse()
+        .withStatus(200).withHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
+        .withBodyFile("listFilterIdsSingle.json")));
 
-    // Mock the behaviour of the Spree v2 API
-    AdviceWith.adviceWith(camelContext, Constants.ROUTE_ID_LIST_PRODUCTS, builder -> {
-      builder.weaveByToUri(ENDPOINT_SPREE_API_LIST_PRODUCTS + "*").replace().setBody().constant(
-          getClass().getResourceAsStream(PATH_TEST_RESOURCES + "listFilterIdsSingle.json"));
-    });
+    final NotifyBuilder notifyBuilder = new NotifyBuilder(camelContext).whenDone(1).create();
 
     /*
      * Single product filter, all Product attributes tested
@@ -39,8 +36,12 @@ class ListProductsApiTest extends AbstractApiTest {
     // @formatter:off
     given()
       .param("filter[ids]", "73")
+      .param("filter[categories]", "101")
+      .param("filter[price]", "<300")
+      .param("include", "image")
+      .param("filter[INCORRECT]", "foo")
     .when()
-      .get(apiListProducts)
+      .get(apiPathListProducts)
     .then()
       .statusCode(SC_OK)
       .contentType(ContentType.JSON)
@@ -71,7 +72,15 @@ class ListProductsApiTest extends AbstractApiTest {
 
     // @formatter:on
 
-    // Notify Builder - assert mockEndpoint received the messages!!
+    // Assert NotifyBBuilder and mock spree endpoint satisfied
+    assertTrue(notifyBuilder.matches(5, TimeUnit.SECONDS));
+
+    verify(1,
+        getRequestedFor(urlPathEqualTo(spreeApiBasePath + spreeApiPathListProducts))
+            .withQueryParam("filter[ids]", equalTo("73"))
+            .withQueryParam("filter[taxons]", equalTo("101"))
+            .withQueryParam("include", equalTo("image"))
+            .withHeader("Accept", equalTo(MediaType.APPLICATION_JSON_VALUE)));
   }
 
 }

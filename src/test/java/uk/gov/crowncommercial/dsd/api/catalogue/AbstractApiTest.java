@@ -20,8 +20,6 @@ import io.restassured.RestAssured;
 @AutoConfigureWireMock(port = 0)
 abstract class AbstractApiTest {
 
-  static final String PATH_TEST_RESOURCES = "/spree-json/";
-
   @Value("${api.paths.base}")
   String apiBasePath;
 

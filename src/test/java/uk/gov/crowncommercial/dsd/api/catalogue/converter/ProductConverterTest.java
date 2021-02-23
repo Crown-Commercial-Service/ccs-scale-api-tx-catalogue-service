@@ -19,7 +19,8 @@ import uk.gov.crowncommercial.dsd.api.catalogue.model.Product;
 /**
  *
  */
-@SpringBootTest(webEnvironment = WebEnvironment.NONE)
+@SpringBootTest(webEnvironment = WebEnvironment.NONE,
+    properties = "SPREE_API_HOST=http://dummy.example.com")
 @ActiveProfiles("test")
 class ProductConverterTest {
 

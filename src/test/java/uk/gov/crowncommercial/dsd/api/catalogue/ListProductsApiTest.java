@@ -52,6 +52,8 @@ class ListProductsApiTest extends AbstractApiTest {
       .body("products[0].deliveryIncludedPrice", is("41.52"))
       .body("products[0].price", is("39.52"))
       .body("products[0].displayDeliveryIncludedPrice", is("£41.52"))
+      .body("products[0].displayPrice", is("£39.52"))
+      .body("products[0].currency", is("GBP"))
       .body("products[0].availableOn", is("2021-02-05T00:00:00Z"))
       .body("products[0].active", is(false))
       .body("products[0].available", is(true))
@@ -72,7 +74,7 @@ class ListProductsApiTest extends AbstractApiTest {
 
     // @formatter:on
 
-    // Assert NotifyBBuilder and mock spree endpoint satisfied
+    // Assert exchange done before verifying external API call
     assertTrue(notifyBuilder.matches(5, TimeUnit.SECONDS));
 
     verify(1,

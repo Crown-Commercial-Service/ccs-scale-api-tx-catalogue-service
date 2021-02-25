@@ -5,6 +5,8 @@ import static io.restassured.RestAssured.given;
 import static org.apache.http.HttpStatus.SC_OK;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.springframework.http.HttpHeaders.ACCEPT;
+import static org.springframework.http.HttpHeaders.AUTHORIZATION;
 import java.util.concurrent.TimeUnit;
 import org.apache.camel.builder.NotifyBuilder;
 import org.junit.jupiter.api.Test;
@@ -35,6 +37,7 @@ class ListProductsApiTest extends AbstractApiTest {
      */
     // @formatter:off
     given()
+      .header(AUTHORIZATION, AUTH_BEARER_TOKEN)
       .param("filter[ids]", "73")
       .param("filter[categories]", "101")
       .param("filter[price]", "<300")
@@ -79,10 +82,11 @@ class ListProductsApiTest extends AbstractApiTest {
 
     verify(1,
         getRequestedFor(urlPathEqualTo(spreeApiBasePath + spreeApiPathListProducts))
+            .withHeader(ACCEPT, equalTo(MediaType.APPLICATION_JSON_VALUE))
+            .withHeader(AUTHORIZATION, equalTo(AUTH_BEARER_TOKEN))
             .withQueryParam("filter[ids]", equalTo("73"))
             .withQueryParam("filter[taxons]", equalTo("101"))
-            .withQueryParam("include", equalTo("image"))
-            .withHeader("Accept", equalTo(MediaType.APPLICATION_JSON_VALUE)));
+            .withQueryParam("include", equalTo("image")));
   }
 
 }

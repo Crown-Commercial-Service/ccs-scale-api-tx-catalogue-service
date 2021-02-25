@@ -8,7 +8,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.ConstructorBinding;
 import org.springframework.web.util.UriComponentsBuilder;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 
 /**
  * Prepare the List Products request to Spree, mostly just translating accepted incoming query
@@ -17,7 +16,6 @@ import lombok.extern.slf4j.Slf4j;
 @ConfigurationProperties("spree.api.query-params.list-products")
 @ConstructorBinding
 @RequiredArgsConstructor
-@Slf4j
 public class SpreeListProductsRequestComposer implements Processor {
 
   private final List<String> passThrough;
@@ -29,9 +27,6 @@ public class SpreeListProductsRequestComposer implements Processor {
     final Map<String, Object> headers = exchange.getIn().getHeaders();
     final UriComponentsBuilder uriBuilder = UriComponentsBuilder.newInstance();
 
-    log.info("Incoming headers: " + headers);
-    log.info("mapped: " + mapped);
-
     passThrough.stream().filter(headers::containsKey)
         .forEach(p -> uriBuilder.queryParam(p, headers.get(p)));
 
@@ -41,7 +36,6 @@ public class SpreeListProductsRequestComposer implements Processor {
     fixed.entrySet().stream().forEach(es -> uriBuilder.queryParam(es.getKey(), es.getValue()));
 
     final String queryString = uriBuilder.build().getQuery();
-    log.info("Spree List Products query string: {}", queryString);
     exchange.getIn().setHeader(Exchange.HTTP_QUERY, queryString);
   }
 

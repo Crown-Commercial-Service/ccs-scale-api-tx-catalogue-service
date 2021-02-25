@@ -20,6 +20,8 @@ import io.restassured.RestAssured;
 @AutoConfigureWireMock(port = 0)
 abstract class AbstractApiTest {
 
+  static final String AUTH_BEARER_TOKEN = "Bearer abc123";
+
   @Value("${api.paths.base}")
   String apiBasePath;
 

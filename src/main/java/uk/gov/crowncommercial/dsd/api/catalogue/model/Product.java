@@ -3,6 +3,8 @@ package uk.gov.crowncommercial.dsd.api.catalogue.model;
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;
 import java.util.List;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.DateTimeFormat.ISO;
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
@@ -46,6 +48,7 @@ public class Product {
 
   @JsonProperty("availableOn")
   @JsonAlias("available_on")
+  @DateTimeFormat(iso = ISO.DATE_TIME)
   private OffsetDateTime availableOn;
 
   @JsonProperty("active")
@@ -103,10 +106,12 @@ public class Product {
 
   @JsonProperty("createdAt")
   @JsonAlias("created_at")
+  @DateTimeFormat(iso = ISO.DATE_TIME)
   private OffsetDateTime createdAt;
 
   @JsonProperty("updatedAt")
   @JsonAlias("updated_at")
+  @DateTimeFormat(iso = ISO.DATE_TIME)
   private OffsetDateTime updatedAt;
 
   @JsonProperty("images")
